@@ -24,7 +24,7 @@ The MVP is specified in [`plans/mvp-implementation-plan.md`](plans/mvp-implement
 ## Commands
 
 ```bash
-npm install        # once (Node 20+)
+npm install        # once (Node 20.19+ or 22.12+, per Vite 7)
 npm test           # vitest, includes determinism golden tests
 npm run typecheck  # strict tsc across workspaces
 npm run lint       # eslint
