@@ -24,8 +24,12 @@ Capability pillars, with Abe's prioritization:
    out: schedule numbers + the full obligation cloud. Game-like potential (see §1b).
 3. **Room → requirements generator** — the "data spine" (see §1c). Same engine as the
    configurator, run in batch over a room list.
-4. **Spec editing assistant** — Abe loves it. Keep. Deterministic template manipulation of
-   the district masters (delete unused w/o renumbering, strip edit notes, track changes).
+4. **Spec edit suggestions** — REVISED (session 4): no docx-editing module anywhere.
+   THIS program emits a TEXT DELIVERABLE: precise per-section edit instructions for the
+   district master specs — KEEP list (with room-driven rationale: "L-1 kept because Rooms
+   101/103/201"), DELETE list (with "do not renumber" reminders), edit notes to strip,
+   options to resolve (e.g., DSB-1 finish), manufacturer-count flags (<3 listed). The
+   designer applies them in Word themselves. Generated from the selection set.
 5. **Q&A with citations** — near-free once KB exists (peripheral LLM over KB).
 6. ~~Design QA / linter~~ — DEFERRED (Abe). Architecturally free to defer: configurator
    output defines expected state; future linter = diff actuals against it.
@@ -92,11 +96,12 @@ Module map (boundaries are data contracts, not features):
                   ┌─ THIS PROGRAM: THE LAUSD STANDARDS/DECISION ENGINE ─┐
                   │  facts in → LAUSD-compliant DECISIONS out           │
                   │  (auto-resolve + exception queue + configurator)    │
-                  └──┬──────────┬──────────────┬─────────────┬──────────┘
-                     ▼          ▼              ▼             ▼
-              fixture sched  occupant tab  temp matrix  selection-set.json
-                                                             │
-                                            [Spec editor — SEPARATE MODULE/REPO (decided)]
+                  └──┬──────────┬───────────┬───────────┬───────────┬───┘
+                     ▼          ▼           ▼           ▼           ▼
+              fixture sched  occupant   temp matrix  equipment  SPEC EDIT
+                             tabulation              list       SUGGESTIONS (text)
+              (selection set = internal model behind the suggestions; exportable
+               as machine artifact for future modules, not a deliverable itself)
               future: [Linter module] consumes our expected-state export + takeoff facts
               future: [Deviation manager module] consumes our non-standard flags
 
@@ -166,16 +171,31 @@ exception queue instead of blocking.
 temp service matrix, equipment list, `selection-set.json` (spec editor contract),
 expected-state export (future linter contract), decision record w/ citations (future BOD).
 
-### 1f. Settled module decisions (session 3)
+### 1f. Settled module decisions (sessions 3–4)
 
-- **Spec editor: SEPARATE MODULE/REPO** (Abe confirmed). Contract = selection-set.json +
-  district master .docx in; edited tracked-changes .docx out.
+- **Spec editing: NO editing module at all** (session 4 supersedes session 3's "separate
+  module" decision). This program emits SPEC EDIT SUGGESTIONS as a text deliverable;
+  the human applies them in Word. Selection set remains the internal model behind it.
 - **Room program EXTRACTION: Abe's dossier program** (not us). Room program RESOLUTION
   (room → requirements): THIS program — it's the configurator engine in batch mode;
   splitting it would cut one engine across two repos. Module boundary sits at the data
   contract, not through the middle of the rules engine.
 - **Room-type taxonomy: WE publish it** (Abe confirmed); dossier pre-maps, free-text
   fallback lands in exception queue.
+
+### 1g. Maintained interface documents (started session 4 — keep these current!)
+
+Abe's directive: maintain precise, evolving docs describing what THIS program needs from
+outside programs — what they deliver, in what shape. Live in `contracts/`:
+- `contracts/README.md` — conventions (versioning, graceful degradation, stable IDs,
+  units, forward compat), index, change management.
+- `contracts/dossier-contract.md` — dossier.json + room_program.json, field by field,
+  each with an "if missing" degradation behavior.
+- `contracts/takeoff-contract.md` — takeoff.json, optional enrichment.
+- `contracts/room-type-taxonomy.md` — OUR published controlled vocabulary (v0 seeded from
+  LAUSD's own rule-bearing room names; grows during KB ingestion).
+Update these whenever scope, rules, or upstream capabilities change. Each carries its own
+version + changelog. Output contracts get added when downstream consumers exist.
 
 ## 2. Document inventory
 
@@ -453,3 +473,9 @@ Deferred: linter, deviation manager (stub a "non-standard" flag in the configura
   room EXTRACTION = dossier program, room RESOLUTION = us (same engine as configurator).
   Module map in §1d. Noted Basis of Design narrative as natural future output of the
   decision record. North star reaffirmed: SO F***ING EASY for the plumbing designer.
+- **2026-06-11 (session 4, same chat)**: Abe approved the identity/outputs. CHANGED: spec
+  editor module killed — replaced by "spec edit suggestions" text deliverable emitted by
+  this program (§1, pillar 4; §1f). NEW STANDING DUTY: maintain interface contract docs
+  (§1g) — created `contracts/` with README, dossier-contract, takeoff-contract, and
+  room-type-taxonomy v0 (~50 codes seeded from LAUSD rule-bearing vocabulary). Still
+  planning phase, no app code.
