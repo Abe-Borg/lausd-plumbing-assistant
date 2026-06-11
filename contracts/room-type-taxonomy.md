@@ -91,6 +91,7 @@ aliases column; matching is case/punctuation-insensitive). Anything unmapped shi
 | Code | Display name | Aliases | Water | Key rule hooks |
 |---|---|---|---|---|
 | `kitchen` | Kitchen (food service) | cafeteria kitchen | HC | FOG program; grease interceptor (3-comp, hand, prep, mop sinks, floor drains/sinks in prep area), separate vent, downstream of lateral; floor sinks at equipment; BPV-3 at equipment; F-7/F-8/F-9 |
+| `kitchen_serving` | Serving/warming kitchen (no cooking) | servery, warming kitchen, serving area | HC | Hand sink; mop/floor sink; **no grease interceptor when no grease-producing equipment present** (SDG 3.4-B.5 ties interceptors to grease-producing equipment — verify scope with District per project) |
 | `cafeteria_dining` | Cafeteria / dining | MPR dining | — | FS-1/FS-2 floor sinks (MPR/cafeteria buildings) |
 | `multipurpose_room` | Multipurpose room | MPR | — | Fountain+bottle filler at lobby |
 | `auditorium` | Auditorium | — | — | Fountain+bottle filler at lobby; concessions HC |
@@ -114,9 +115,11 @@ aliases column; matching is case/punctuation-insensitive). Anything unmapped shi
 | `trash_area_uncovered` | Uncovered trash area | trash enclosure | — | FD-10 diversion-valve drain (storm↔sewer); RP backflow on its hose bibb |
 | `lath_house` | Lath house | greenhouse | C | HB-3 |
 | `corridor_walkway` | Corridor / exterior walkway | hall | — | Fountains/bottle fillers in CBC alcoves; upper-floor exterior walkways: recessed hose bibbs + drains, hose-down design |
+| `play_yard` | Play yard / exterior play area | playground, courts, play area | — | Fountain + bottle filler required at exterior play areas (SDG 2.1-K.2.a.4); exterior units vandal-resistant w/ recessed hose bibb beneath; sun-exposed stainless gets solar-reflective powder coat |
 
 ## Changelog
 
 | Date | Version | Change |
 |---|---|---|
 | 2026-06-11 | 0.1 | Initial ~55-code seed from SDG 3.4 / 2.1-J,K and Guide Spec 22 1000 commentary. Codes are append-only from here. |
+| 2026-06-11 | 0.2 | Appended `kitchen_serving` and `play_yard` (needed by the Vista del Sol synthetic project). |

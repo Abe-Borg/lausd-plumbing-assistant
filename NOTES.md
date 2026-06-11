@@ -197,7 +197,29 @@ outside programs — what they deliver, in what shape. Live in `contracts/`:
 Update these whenever scope, rules, or upstream capabilities change. Each carries its own
 version + changelog. Output contracts get added when downstream consumers exist.
 
+### 1h. MVP v0 (session 5) — see `plans/mvp-implementation-plan.md` (authoritative)
+
+One sentence: **load a room program for one small elementary school → deterministic
+decisions auto-resolve with citations → designer answers a short exception-card stack →
+out come the fixture schedule, fixture-to-occupant tabulation, and water temp matrix —
+then the DD-shuffle delta proves no human decision is ever lost.**
+- NO LLM anywhere in MVP (queue substitutes for all LLM edges). No network at runtime.
+- Stack fixed: TS monorepo — pure engine package, KB-as-JSON package, Vite/React app.
+- Synthetic project: `synthetic/vista-del-sol/` (narrative + dossier.json +
+  room_program.json + v2 delta; takeoff.json intentionally absent). 43 rooms, K-5,
+  all-electric, serving-only kitchen, 350 capacity / 13 classrooms, 88 psi street.
+- Seeded exceptions: STEAM ROOM (null type), MULTI-USE ROOM (conf 0.6), Boys RR A110
+  (age band null), general-classroom sink batch card, restroom quantity cards.
+- Out of MVP: spec edit suggestions (stretch S-1), equipment list, gas/grease/science,
+  modernization, takeoff ingestion.
+- Top risk: CPC fixture-count ratios not in our extracts → encoded as DRAFT + badged in
+  UI + OPEN-QUESTIONS.md; human-verify before any demo (plan §10 R1).
+- Taxonomy bumped to v0.2 (appended `kitchen_serving`, `play_yard`).
+
 ## 2. Document inventory
+
+> Standard Technical Drawings: **deferred for a while** (Abe, session 5) — keep tracking
+> in the missing-docs list below; don't plan work against them until Abe re-opens it.
 
 ### In hand (extracted to text in /tmp/docs during session 1; re-extract as needed)
 | Doc | Version | What it is |
@@ -479,3 +501,10 @@ Deferred: linter, deviation manager (stub a "non-standard" flag in the configura
   (§1g) — created `contracts/` with README, dossier-contract, takeoff-contract, and
   room-type-taxonomy v0 (~50 codes seeded from LAUSD rule-bearing vocabulary). Still
   planning phase, no app code.
+- **2026-06-11 (session 5, same chat)**: PR #1 merged earlier. Defined MVP (§1h) and
+  wrote `plans/mvp-implementation-plan.md` for the coding-agent team (no code, by
+  Abe's instruction — agents will write it). Built synthetic project
+  `synthetic/vista-del-sol/` (narrative + contract-conformant dossier/room program +
+  v2 delta for the DD-shuffle demo). Taxonomy → v0.2. Standard Technical Drawings
+  deferred for a while (§2 note). Demo audience: the plumbing team; no-overwhelm is
+  an explicit design constraint in the plan.

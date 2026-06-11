@@ -1,0 +1,68 @@
+{
+  "contract_version": "0.1",
+  "project": {
+    "project_id": "vds-es-2026",
+    "name": "Vista del Sol ES — New Construction",
+    "school_name": "Vista del Sol Elementary School",
+    "lausd_project_id": "SYN-00001",
+    "school_level": "elementary",
+    "grade_min": 0,
+    "grade_max": 5,
+    "project_type": "new_construction",
+    "planned_capacity": 350,
+    "classroom_count": 13,
+    "jurisdiction": {
+      "city": "Los Angeles",
+      "is_city_of_la": true,
+      "county": "Los Angeles"
+    },
+    "water_purveyor": {
+      "name": "LADWP",
+      "is_ladwp": true
+    },
+    "street_pressure_psi": 88,
+    "street_pressure_psi_source": "Water Pressure Flow Report (synthetic), SAR dated 2026-03-15",
+    "sewer_connection_known": true,
+    "gas": {
+      "has_service": false
+    }
+  },
+  "buildings": [
+    {
+      "building_id": "bldg-a",
+      "name": "Building A — Classrooms",
+      "floors": 2,
+      "has_basement_or_subterranean_parking": false,
+      "is_existing": false
+    },
+    {
+      "building_id": "bldg-b",
+      "name": "Building B — Admin / Multipurpose",
+      "floors": 1,
+      "has_basement_or_subterranean_parking": false,
+      "is_existing": false
+    },
+    {
+      "building_id": "site",
+      "name": "Site Structures",
+      "floors": 1,
+      "has_basement_or_subterranean_parking": false,
+      "is_existing": false
+    }
+  ],
+  "campus_features": {
+    "food_service": "serving_only",
+    "pool": false,
+    "science_labs": false,
+    "auto_shop": false,
+    "wood_shop": false,
+    "ceramics": false,
+    "agriculture": false,
+    "athletic_fields": false,
+    "eec_onsite": false,
+    "laundry": false,
+    "film_or_photo_lab": false,
+    "culinary_arts": false,
+    "parking_subterranean": false
+  }
+}
