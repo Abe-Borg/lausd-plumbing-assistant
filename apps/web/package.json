@@ -1,0 +1,24 @@
+{
+  "name": "@lausd-pa/web",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Vite + React SPA: load, dashboard, exception queue, room detail, artifacts, delta flow. No backend, no runtime network.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@lausd-pa/engine": "*",
+    "@lausd-pa/kb": "*",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^7.0.0"
+  }
+}
