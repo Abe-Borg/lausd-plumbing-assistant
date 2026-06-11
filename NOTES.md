@@ -6,33 +6,77 @@
 
 ---
 
-## 1. Mission (draft — still hazy by design, refine with Abe)
+## 1. Mission (refined 2026-06-11 session 2 — Abe's direction locked in)
 
-Working hypothesis: **reduce the mental load of designing plumbing for LAUSD schools to
-code + district standards, by turning LAUSD's prose standards into structured, queryable,
-composable knowledge.**
+**Make LAUSD plumbing design REALLY EASY** (Abe's words, emphatically). Easy = fewer
+decisions + zero double-checking. The plumbing designer today plays "lego assembly" from
+memory across ~5+ documents. The program does the assembly, the cross-referencing, and the
+rule-triggering, so the human does engineering judgment.
 
-The plumbing designer today plays "lego assembly" from memory across ~5+ documents. The
-program should do the assembly, the cross-referencing, and the rule-triggering, so the
-human does engineering judgment.
+**Primary user: the plumbing designer (at an A/E firm).**
+**Upstream data: construction drawings (PDF). Revit explicitly OUT of scope for now.**
 
-Candidate capability pillars (roughly in dependency order):
-1. **Structured knowledge base** — parse Design Guide + Guide Specs into a database of
-   fixtures/assemblies, rules (trigger → obligation), pipe/material schedules, with
-   citations and version dates. Everything else builds on this.
-2. **Q&A with citations** — "what faucet goes on a student lavatory?" → answer + source.
-3. **Assembly configurator** — input context (room type, grade level, indoor/outdoor, ADA,
-   vandalism, new vs modernization) → output complete assembly: schedule numbers, all
-   attached obligations (cleanout, WHA, valves, temps, panels, heights, backing).
-4. **Room → requirements generator** — room program in, per-room plumbing requirements +
-   fixture counts (CPC minimums w/ LAUSD occupant-load overrides) out.
-5. **Spec editing assistant** — given the project's selected fixture set, produce the
-   edited 22 1000 etc. (delete unused without renumbering, strip edit notes, keep ≥3
-   manufacturers, track changes), diff against district's latest revision.
-6. **Design QA / linter** — check fixture schedules vs spec designations, prohibitions,
-   header/branch sizing, cleanout placement, submittal checklist completeness.
-7. **Deviation manager** — detect non-standard choices, draft Substitution/Deviation
-   Request content (one form per item, single PDF, early submission).
+Capability pillars, with Abe's prioritization:
+1. **Structured knowledge base** — foundation for everything. Fixtures/assemblies, rules
+   (trigger → obligation), pipe/material schedules, citations + version dates.
+2. **Assembly configurator** — ★ FRONT AND CENTER, the leading man. Context in (room type,
+   grade level, indoor/outdoor, ADA, vandalism, new vs modernization) → complete assembly
+   out: schedule numbers + the full obligation cloud. Game-like potential (see §1b).
+3. **Room → requirements generator** — the "data spine" (see §1c). Same engine as the
+   configurator, run in batch over a room list.
+4. **Spec editing assistant** — Abe loves it. Keep. Deterministic template manipulation of
+   the district masters (delete unused w/o renumbering, strip edit notes, track changes).
+5. **Q&A with citations** — near-free once KB exists (peripheral LLM over KB).
+6. ~~Design QA / linter~~ — DEFERRED (Abe). Architecturally free to defer: configurator
+   output defines expected state; future linter = diff actuals against it.
+7. ~~Deviation manager~~ — DEFERRED (Abe). It's the configurator's "not in standards"
+   branch; stub as a flag now, build workflow later.
+
+### 1a. Architecture position: LLM at the PERIPHERY, deterministic heart (decided, session 2)
+
+Abe asked: LLM at the heart or periphery? My recommendation (delivered, he's on board with
+direction generally): **periphery**. Rationale:
+- Trust IS ease. Same input must give same output, with a citation, every time. A designer
+  who must re-verify tool output against source docs gets negative value.
+- The domain is finite & enumerable (~60 schedule families, a few hundred rules, a dozen
+  tables). It fits in a database; it doesn't need probabilistic recall.
+- LLM failure modes (hallucinated model numbers, plausible-wrong selections) cost DSA
+  round-trips and change orders.
+
+**Deterministic heart**: KB + rules/selection engine + template-based doc generation (spec
+editor NEVER generates prose; it assembles canonical LAUSD text blocks).
+
+**LLM's four jobs (all at the edge):**
+1. **Ingestion** (biggest win): parse LAUSD Word/PDF prose → structured records, offline,
+   once per doc version, human-verified. Source docs are dirty (duplicate CO-4 etc.) —
+   needs intelligence + review UI, not a rigid parser.
+2. **Front door**: NL → pre-filled configurator state ("3rd grade RR, modernization,
+   450 kids"). LLM routes, never answers.
+3. **Explanation**: conversational "why" grounded in retrieved rules, citation attached.
+4. Later: deviation-request & comment-response drafting (prose, human-reviewed by nature).
+
+### 1b. Configurator: game-like angle (Abe: "could be fun, come back to it")
+
+The selection structure IS a build/loadout screen: pick context chips (grade band, ADA,
+outdoor, vandalism) → assembly snaps together (bowl docks, faucet docks, trap docks) →
+obligation cloud lights up as a checklist with a completeness meter. The snap-together
+feedback is the correctness model made visible — an incomplete assembly LOOKS incomplete.
+Avoid points/badges; the dopamine is the fully-resolved package clicking into place.
+
+### 1c. Room program = the data spine (Abe: "compelling — expand")
+
+Entered once, drives everything downstream:
+- **Input paths**: (a) fast manual grid (room #, name, grade band, floor, occupancy —
+  ~20 min from the architectural set); (b) LLM-assisted extraction of the architect's
+  room schedule sheet from PDF → proposed list → designer confirms in review UI.
+- **Engine**: room name → RoomTypeProfile → trigger catalog fires (fixtures, counts,
+  water temp class, drains, emergency equipment, special waste, gas).
+- **Outputs**: drawing-ready fixture schedule (designations matching 22 1000 = instant
+  compliance) • the REQUIRED fixture-to-occupant tabulation (mandatory plan deliverable,
+  generated as a side effect!) • water temp service matrix • triggered equipment list
+  (WHs, TMVs, circ pumps via distance rules) • spec-editor selection set.
+- **Compounding payoff**: architect moves a restroom in DD → update one row → schedule,
+  tabulation, spec all regenerate. Kills the #1 source of drawing/spec mismatch.
 
 ## 2. Document inventory
 
@@ -258,18 +302,31 @@ parsing; the source material is imperfect.
 
 ## 12. Open questions for Abe
 
-1. Primary user: plumbing designer/engineer at an A/E firm? LAUSD design standards reviewer?
-   Both? (Changes UX: authoring tool vs checking tool.)
-2. What inputs exist upstream — Revit/BIM models, room data sheets, Excel programs? (SDG
-   mandates AutoCAD .dwg + Excel schedules w/ CAFM IDs — integration targets?)
-3. MVP preference: Q&A over the docs (fastest), or the assembly configurator (highest
-   wow/value), or spec editor (most tedium removed)?
+1. ~~Primary user~~ → ANSWERED: plumbing designer.
+2. ~~Upstream inputs~~ → ANSWERED: Revit + construction drawings exist; **focus on
+   construction drawings (PDF) only for now, no Revit work.**
+3. ~~MVP preference~~ → ANSWERED: assembly configurator front and center; QA/linter and
+   deviation manager deferred.
 4. Can we get: Standard Technical Drawings, Book 4 checklists (esp. 4.9), Ed Specs, the
-   remaining Division 22 sections, CPC access?
+   remaining Division 22 sections, CPC access? (Abe: "I'll show you those technical
+   details later on.")
 5. Is replacement/modernization work (existing schools) in scope from day 1? Lots of special
    "existing facilities" carve-outs (e.g., floor drain feasibility 3.4-B.7.c/d).
 6. Licensing/liability framing: outputs are decision support w/ citations, engineer of
    record still seals. (Position the tool accordingly.)
+7. Game-like configurator: how far to take it? (Parked by mutual agreement; revisit at
+   UI design time.)
+
+## 12a. Build order (current thinking, post session 2)
+
+1. KB schema + ingest 22 1000 and SDG 3.4 first (LLM-assisted, human-verified). The
+   content IS the product.
+2. Selection/rules engine + **configurator UI** (the hero).
+3. Room-program entry (manual grid + PDF room-schedule extraction) → batch configurator →
+   fixture schedule + occupant tabulation outputs.
+4. Spec editor (deterministic generation from selection set).
+5. Cited Q&A whenever convenient after KB exists (cheap).
+Deferred: linter, deviation manager (stub a "non-standard" flag in the configurator).
 
 ## 13. Session log
 
@@ -279,3 +336,9 @@ parsing; the source material is imperfect.
   the district itself wants pre-bundling. Found internal doc defects (§10). Delivered
   analysis of pain points + capability map to Abe in chat. No code yet — repo is empty
   (LICENSE only).
+- **2026-06-11 (session 2, same chat)**: Direction locked: configurator front & center;
+  room program = data spine (expanded, §1c); spec editor confirmed; linter + deviation
+  manager deferred; primary user = plumbing designer; construction drawings only (no
+  Revit). Recommended and recorded LLM-at-periphery architecture (§1a): deterministic
+  KB/rules heart, LLM for ingestion / NL front door / explanation / later prose drafting.
+  Game-like configurator angle noted (§1b). Still no code — by design.
