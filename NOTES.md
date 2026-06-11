@@ -66,17 +66,116 @@ Avoid points/badges; the dopamine is the fully-resolved package clicking into pl
 ### 1c. Room program = the data spine (Abe: "compelling — expand")
 
 Entered once, drives everything downstream:
-- **Input paths**: (a) fast manual grid (room #, name, grade band, floor, occupancy —
-  ~20 min from the architectural set); (b) LLM-assisted extraction of the architect's
-  room schedule sheet from PDF → proposed list → designer confirms in review UI.
+- **Input paths**: comes from Abe's DOSSIER PROGRAM (see §1d) — extraction is NOT our job.
 - **Engine**: room name → RoomTypeProfile → trigger catalog fires (fixtures, counts,
   water temp class, drains, emergency equipment, special waste, gas).
 - **Outputs**: drawing-ready fixture schedule (designations matching 22 1000 = instant
   compliance) • the REQUIRED fixture-to-occupant tabulation (mandatory plan deliverable,
   generated as a side effect!) • water temp service matrix • triggered equipment list
   (WHs, TMVs, circ pumps via distance rules) • spec-editor selection set.
-- **Compounding payoff**: architect moves a restroom in DD → update one row → schedule,
-  tabulation, spec all regenerate. Kills the #1 source of drawing/spec mismatch.
+- **Compounding payoff**: architect moves a restroom in DD → re-import → delta shown →
+  only changed decisions re-enter the exception queue. Kills the #1 source of
+  drawing/spec mismatch.
+
+### 1d. Ecosystem / module map (session 3 — Abe's modularity doctrine)
+
+Abe builds modular, nimble programs. He ALREADY HAS:
+- **Takeoff program**: counts fixtures, areas, lengths from drawings.
+- **Dossier program**: builds the whole-job dossier from a drawing set AND builds the
+  room program.
+
+Module map (boundaries are data contracts, not features):
+
+    [Takeoff pgm]──takeoff.json(optional)──┐
+    [Dossier pgm]──dossier.json+rooms.json─┤
+                                           ▼
+                  ┌─ THIS PROGRAM: THE LAUSD STANDARDS/DECISION ENGINE ─┐
+                  │  facts in → LAUSD-compliant DECISIONS out           │
+                  │  (auto-resolve + exception queue + configurator)    │
+                  └──┬──────────┬──────────────┬─────────────┬──────────┘
+                     ▼          ▼              ▼             ▼
+              fixture sched  occupant tab  temp matrix  selection-set.json
+                                                             │
+                                            [Spec editor — SEPARATE MODULE/REPO (decided)]
+              future: [Linter module] consumes our expected-state export + takeoff facts
+              future: [Deviation manager module] consumes our non-standard flags
+
+**Identity in one line: "Where project facts become LAUSD-compliant plumbing decisions."**
+Everything ingested = facts. Everything emitted = decisions + the paperwork proving them.
+
+**What the designer opens this program FOR** (the nailed-down answer):
+They are here to exercise engineering judgment on the decisions that genuinely need a
+human — and nothing else. No data entry (upstream did it), no document formatting
+(downstream modules do it). Session loop:
+1. Import/refresh dossier + room program (one click).
+2. Program auto-resolves every deterministic decision (with citations) BEFORE showing UI.
+3. **Exception queue** (inbox-zero model): only ambiguities, multi-option choices, missing
+   data, and deviation candidates ask for the human. The game-like configurator is the
+   exception-resolution UI — each card snaps together, completeness meters per
+   room/building/project.
+4. Export deliverables: fixture schedule, fixture-to-occupant tabulation, water temp
+   matrix, equipment list, selection-set.json → spec editor module.
+5. On upstream change: re-import → delta view → only changed decisions re-queue.
+Target feel: a whole elementary school processed in ~an hour, mostly reviewing green
+checkmarks. THAT is "so fucking easy."
+
+Decision record bonus: persisted decisions + citations + rationale ≈ the skeleton of the
+**plumbing Basis of Design narrative** (required at every SDG submittal phase). Natural
+future output, not v1 scope.
+
+### 1e. Input contract (draft v0 — to validate when Abe shares his programs' details)
+
+Form: versioned JSON files (`dossier.json`, `room_program.json`, `takeoff.json`); we
+publish the schema, his programs target it. **Graceful degradation everywhere**: only a
+minimal core is required; every missing field parks its dependent decisions in the
+exception queue instead of blocking.
+
+**From DOSSIER program — project context (required core ★):**
+- ★ School level / grade configuration (K-5, 6-8, 9-12, EEC, span — note K-8 spans = age
+  bands vary BY ROOM, not by project)
+- ★ Project type: new / comprehensive modernization / repair-expansion / replacement-in-kind
+- ★ Planned capacity (student fixture counts) + classroom count (staff = 2 adults/room)
+- Jurisdiction: city (LA vs other — LA San is the floor regardless), water purveyor
+  (LADWP → Rule 16-D), street pressure if known (>80 psi → PRV station)
+- Buildings/floors structure (multi-story → per-floor isolation valves; per-floor fixture
+  requirements)
+- Campus feature flags: kitchen/food service type, pool, science labs, auto shop,
+  ceramics, agriculture, subterranean parking, athletic fields, EEC, laundry…
+  (each flips on whole subsystems)
+
+**From DOSSIER program — room program (required core ★):**
+- ★ room_id, room number, name/type, building, floor
+- ★ Room type code from OUR PUBLISHED TAXONOMY (decided: we own the controlled room-type
+  vocabulary, built from LAUSD's own ~30+ rule-bearing room names; dossier pre-maps what
+  it can; unmapped rooms arrive free-text → exception queue one-click classify)
+- ★ Age band / grade level served per room (SDG requires arch drawings to label age group
+  per restroom — so this data exists upstream)
+- Occupant load, area, ADA flags, indoor/outdoor, new-vs-existing status (modernization)
+- Adjacencies (valuable: EEW-3 flip-down eyewash only legal in prep rooms IMMEDIATELY
+  ACCESSIBLE to a lab w/ deluge shower; custodial-adjacent-to-RR checks later)
+
+**From TAKEOFF program — optional enrichment (v1 ships without it):**
+- Existing fixture inventory by room (modernization: replacement-in-kind logic,
+  floor-drain feasibility, urinal conversions)
+- Distances/lengths when known: WH→fixture-group distances (circ pump triggers 25/50 ft),
+  building perimeters (hose bibb 75 ft spacing). Unknown distance → rule parks in queue
+  as "provide distance or accept assumption."
+- Drawn fixture counts (future linter food, NOT consumed in v1)
+
+**Out the back (our exports):** fixture schedule, fixture-to-occupant tabulation, water
+temp service matrix, equipment list, `selection-set.json` (spec editor contract),
+expected-state export (future linter contract), decision record w/ citations (future BOD).
+
+### 1f. Settled module decisions (session 3)
+
+- **Spec editor: SEPARATE MODULE/REPO** (Abe confirmed). Contract = selection-set.json +
+  district master .docx in; edited tracked-changes .docx out.
+- **Room program EXTRACTION: Abe's dossier program** (not us). Room program RESOLUTION
+  (room → requirements): THIS program — it's the configurator engine in batch mode;
+  splitting it would cut one engine across two repos. Module boundary sits at the data
+  contract, not through the middle of the rules engine.
+- **Room-type taxonomy: WE publish it** (Abe confirmed); dossier pre-maps, free-text
+  fallback lands in exception queue.
 
 ## 2. Document inventory
 
@@ -310,6 +409,9 @@ parsing; the source material is imperfect.
 4. Can we get: Standard Technical Drawings, Book 4 checklists (esp. 4.9), Ed Specs, the
    remaining Division 22 sections, CPC access? (Abe: "I'll show you those technical
    details later on.")
+4a. Validate input contract §1e against the ACTUAL outputs of Abe's dossier + takeoff
+   programs when he shares them (esp.: can dossier supply age band per room and project
+   type? what does its room program record look like today?).
 5. Is replacement/modernization work (existing schools) in scope from day 1? Lots of special
    "existing facilities" carve-outs (e.g., floor drain feasibility 3.4-B.7.c/d).
 6. Licensing/liability framing: outputs are decision support w/ citations, engineer of
@@ -342,3 +444,12 @@ Deferred: linter, deviation manager (stub a "non-standard" flag in the configura
   Revit). Recommended and recorded LLM-at-periphery architecture (§1a): deterministic
   KB/rules heart, LLM for ingestion / NL front door / explanation / later prose drafting.
   Game-like configurator angle noted (§1b). Still no code — by design.
+- **2026-06-11 (session 3, same chat)**: Modularity round. Abe revealed existing takeoff
+  program + dossier program (which also builds the room program). Nailed this program's
+  identity: the LAUSD STANDARDS/DECISION ENGINE — facts in, compliant decisions +
+  deliverables out; designer is here ONLY for judgment calls via the exception queue
+  (inbox-zero model). Drafted input contract v0 (§1e). Decided: spec editor = separate
+  module/repo; we publish the room-type taxonomy (dossier pre-maps, free-text fallback);
+  room EXTRACTION = dossier program, room RESOLUTION = us (same engine as configurator).
+  Module map in §1d. Noted Basis of Design narrative as natural future output of the
+  decision record. North star reaffirmed: SO F***ING EASY for the plumbing designer.
