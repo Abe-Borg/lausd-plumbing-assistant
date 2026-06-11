@@ -1,0 +1,80 @@
+{
+  "basis": {
+    "id": "counts.occupancy_basis",
+    "kind": "count_basis",
+    "students": "planned_capacity",
+    "staff": "two_per_classroom",
+    "rounding": "ceil",
+    "citations": [
+      {
+        "doc": "SDG",
+        "section": "2.1-J (fixture counts / occupant load)",
+        "doc_version": "02/26/2025",
+        "note": "Student fixture counts based on planned capacity (not code occupancy); staff = 2 adults per classroom; tabulated fixture-to-occupant calculation required on plans."
+      }
+    ],
+    "verification_status": "verified"
+  },
+  "sex_split": {
+    "id": "counts.sex_split",
+    "kind": "sex_split",
+    "male": 0.5,
+    "female": 0.5,
+    "citations": [
+      {
+        "doc": "SDG",
+        "section": "2.1-J (fixture counts)",
+        "doc_version": "02/26/2025",
+        "note": "50/50 sex split assumed unless the project states otherwise — assumption, not a cited LAUSD value."
+      }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-2: confirm the 50/50 sex-split convention for planned capacity."
+  },
+  "ratio_tables": [
+    {
+      "id": "counts.ratios.students_elementary",
+      "kind": "count_ratios",
+      "occupancy": "students_elementary",
+      "ratios": [
+        { "fixture_class": "wc", "sex": "male", "per": 30 },
+        { "fixture_class": "wc", "sex": "female", "per": 25 },
+        { "fixture_class": "urinal", "sex": "male", "per": 75 },
+        { "fixture_class": "lavatory", "sex": "male", "per": 35 },
+        { "fixture_class": "lavatory", "sex": "female", "per": 35 },
+        { "fixture_class": "drinking_fountain", "per": 150 }
+      ],
+      "citations": [
+        {
+          "doc": "CPC",
+          "section": "Table 422.1 (minimum plumbing facilities — elementary schools)",
+          "doc_version": "edition to verify",
+          "note": "PLACEHOLDER values — the CPC table is not in our source extracts. Every figure derived from these renders with a DRAFT badge."
+        }
+      ],
+      "verification_status": "draft",
+      "todo": "OQ-1: verify all elementary-school fixture ratios against the current CPC edition before any demo."
+    },
+    {
+      "id": "counts.ratios.staff_adult",
+      "kind": "count_ratios",
+      "occupancy": "staff_adult",
+      "ratios": [
+        { "fixture_class": "wc", "sex": "male", "per": 25 },
+        { "fixture_class": "wc", "sex": "female", "per": 20 },
+        { "fixture_class": "lavatory", "sex": "male", "per": 40 },
+        { "fixture_class": "lavatory", "sex": "female", "per": 40 }
+      ],
+      "citations": [
+        {
+          "doc": "CPC",
+          "section": "Table 422.1 (minimum plumbing facilities — employees/staff)",
+          "doc_version": "edition to verify",
+          "note": "PLACEHOLDER values — the CPC table is not in our source extracts. Every figure derived from these renders with a DRAFT badge."
+        }
+      ],
+      "verification_status": "draft",
+      "todo": "OQ-1: verify staff/employee fixture ratios against the current CPC edition before any demo."
+    }
+  ]
+}

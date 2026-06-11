@@ -1,0 +1,881 @@
+[
+  {
+    "id": "profile.classroom_general",
+    "kind": "room_type_profile",
+    "room_type_code": "classroom_general",
+    "water_class": "C",
+    "fixture_requirements": [
+      {
+        "id": "req.classroom_general.sink",
+        "kind": "fixture_requirement",
+        "key": "sink",
+        "label": "Classroom sink",
+        "selector": { "kind": "fixed", "assembly": "ST-4" },
+        "quantity": {
+          "rule": "conditional_policy",
+          "policy": "classroom_general_sinks",
+          "prompt": "Do general classrooms receive classroom sinks (ST-4)?",
+          "then": { "n": 1 }
+        },
+        "citations": [
+          { "doc": "contracts/room-type-taxonomy.md", "section": "classroom_general", "doc_version": "0.2", "note": "ST-4 if sink; cold only." },
+          { "doc": "SDG", "section": "3.4-D (water temperature)", "doc_version": "02/26/2025", "note": "Cold only: general classrooms. Whether sinks are provided is an Ed-Specs decision, not derivable from drawings." }
+        ],
+        "verification_status": "verified"
+      }
+    ],
+    "obligations": ["ob.co.above_fixture", "ob.wha.header", "ob.iso.room"],
+    "triggers": [],
+    "citations": [
+      { "doc": "SDG", "section": "3.4-D (water temperature)", "doc_version": "02/26/2025", "note": "Cold only: general classrooms." },
+      { "doc": "contracts/room-type-taxonomy.md", "section": "classroom_general", "doc_version": "0.2" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.classroom_kindergarten",
+    "kind": "room_type_profile",
+    "room_type_code": "classroom_kindergarten",
+    "water_class": "C",
+    "fixture_requirements": [
+      {
+        "id": "req.classroom_kindergarten.sink",
+        "kind": "fixture_requirement",
+        "key": "sink",
+        "label": "Classroom sink",
+        "selector": { "kind": "fixed", "assembly": "ST-4" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "baseline" },
+        "citations": [
+          { "doc": "contracts/room-type-taxonomy.md", "section": "classroom_kindergarten", "doc_version": "0.2", "note": "Age-band heights; attached RR carries WC-5." },
+          { "doc": "SDG", "section": "3.4-D (water temperature)", "doc_version": "02/26/2025", "note": "Cold only: kindergarten." }
+        ],
+        "verification_status": "draft",
+        "todo": "OQ-15: verify that kindergarten classrooms receive an ST-4 sink (Ed Specs) — encoded as the planning record's expected output."
+      }
+    ],
+    "obligations": ["ob.co.above_fixture", "ob.wha.header", "ob.iso.room"],
+    "triggers": [],
+    "citations": [
+      { "doc": "SDG", "section": "3.4-D (water temperature)", "doc_version": "02/26/2025", "note": "Cold only: kindergarten." },
+      { "doc": "contracts/room-type-taxonomy.md", "section": "classroom_kindergarten", "doc_version": "0.2" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.classroom_flexible",
+    "kind": "room_type_profile",
+    "room_type_code": "classroom_flexible",
+    "water_class": "HC",
+    "fixture_requirements": [
+      {
+        "id": "req.classroom_flexible.sink",
+        "kind": "fixture_requirement",
+        "key": "sink",
+        "label": "Sink assembly",
+        "selector": { "kind": "fixed", "assembly": "ST-2" },
+        "quantity": {
+          "rule": "designer_quantity",
+          "suggest": { "method": "fixed", "n": 1 }
+        },
+        "citations": [
+          { "doc": "contracts/room-type-taxonomy.md", "section": "classroom_flexible", "doc_version": "0.2", "note": "ST-2; flexible classroom programs vary — confirm sink count." }
+        ],
+        "verification_status": "verified"
+      }
+    ],
+    "obligations": ["ob.co.above_fixture", "ob.wha.header", "ob.iso.room"],
+    "triggers": [],
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "classroom_flexible", "doc_version": "0.2", "note": "Water: HC." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.art_classroom",
+    "kind": "room_type_profile",
+    "room_type_code": "art_classroom",
+    "water_class": "HC",
+    "fixture_requirements": [
+      {
+        "id": "req.art_classroom.sink",
+        "kind": "fixture_requirement",
+        "key": "sink",
+        "label": "Art classroom sink",
+        "selector": {
+          "kind": "choice",
+          "options": [
+            { "assembly": "ST-5", "consequence": "Art sink assembly type 5 — composition per 22 1000 (to verify)." },
+            { "assembly": "ST-6", "consequence": "Art sink assembly type 6 — composition per 22 1000 (to verify)." }
+          ]
+        },
+        "quantity": {
+          "rule": "designer_quantity",
+          "suggest": { "method": "fixed", "n": 1 }
+        },
+        "citations": [
+          { "doc": "contracts/room-type-taxonomy.md", "section": "art_classroom", "doc_version": "0.2", "note": "ST-5/ST-6; water HC." },
+          { "doc": "SDG", "section": "3.4-D (water temperature)", "doc_version": "02/26/2025", "note": "Hot+cold: art rooms." }
+        ],
+        "verification_status": "draft",
+        "todo": "OQ-10: ST-5 vs ST-6 selection guidance not in extracts — designer chooses; verify guidance against 22 1000 commentary."
+      }
+    ],
+    "obligations": ["ob.co.above_fixture", "ob.wha.header", "ob.iso.room"],
+    "triggers": [],
+    "citations": [
+      { "doc": "SDG", "section": "3.4-D (water temperature)", "doc_version": "02/26/2025", "note": "Hot+cold: art rooms." },
+      { "doc": "contracts/room-type-taxonomy.md", "section": "art_classroom", "doc_version": "0.2" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.restroom_student",
+    "kind": "room_type_profile",
+    "room_type_code": "restroom_student",
+    "water_class": "T",
+    "fixture_requirements": [
+      {
+        "id": "req.restroom_student.wc.gang",
+        "kind": "fixture_requirement",
+        "key": "wc",
+        "label": "Water closets",
+        "selector": {
+          "kind": "by_age_band",
+          "standard": { "preK_K": "WC-5", "elementary": "WC-1", "secondary_adult": "WC-3" },
+          "accessible": { "elementary": "WC-2", "secondary_adult": "WC-4" }
+        },
+        "quantity": {
+          "rule": "designer_quantity",
+          "suggest": { "method": "ratio_allocation", "fixture_class": "wc" }
+        },
+        "applies_when": { "classroom_attached": false },
+        "citations": [
+          { "doc": "22 1000", "section": "Part 2 — WC schedule (WC-1…WC-6)", "doc_version": "250908", "note": "WC variant by age band and accessibility." },
+          { "doc": "SDG", "section": "2.1-J (fixture counts)", "doc_version": "02/26/2025", "note": "Counts from planned capacity; per-room allocation is designer judgment (suggestion = required ÷ restrooms, editable)." }
+        ],
+        "verification_status": "verified"
+      },
+      {
+        "id": "req.restroom_student.wc.attached",
+        "kind": "fixture_requirement",
+        "key": "wc",
+        "label": "Water closet",
+        "selector": {
+          "kind": "by_age_band",
+          "standard": { "preK_K": "WC-5", "elementary": "WC-1", "secondary_adult": "WC-3" },
+          "accessible": { "elementary": "WC-2", "secondary_adult": "WC-4" }
+        },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "baseline" },
+        "applies_when": { "classroom_attached": true },
+        "citations": [
+          { "doc": "contracts/room-type-taxonomy.md", "section": "classroom_kindergarten", "doc_version": "0.2", "note": "WC-5 (11–12 in. bowl, 1¼ in. seat ring) in attached RR." }
+        ],
+        "verification_status": "verified",
+        "notes": "Classroom-attached single restroom: baseline one water closet, editable in room detail."
+      },
+      {
+        "id": "req.restroom_student.urinal",
+        "kind": "fixture_requirement",
+        "key": "urinal",
+        "label": "Urinals",
+        "selector": { "kind": "fixed", "assembly": "U-3", "accessible": "U-4" },
+        "quantity": {
+          "rule": "designer_quantity",
+          "suggest": { "method": "ratio_allocation", "fixture_class": "urinal" }
+        },
+        "applies_when": { "sex": "male", "classroom_attached": false },
+        "citations": [
+          { "doc": "22 1000", "section": "Part 2 — U schedule (U-1…U-4)", "doc_version": "250908", "note": "U-3/U-4 at boys student restrooms per planning record." },
+          { "doc": "SDG", "section": "2.1-J (fixture counts)", "doc_version": "02/26/2025" }
+        ],
+        "verification_status": "verified"
+      },
+      {
+        "id": "req.restroom_student.lav.gang",
+        "kind": "fixture_requirement",
+        "key": "lav",
+        "label": "Lavatories",
+        "selector": { "kind": "fixed", "assembly": "L-1", "accessible": "L-2" },
+        "quantity": {
+          "rule": "designer_quantity",
+          "suggest": { "method": "ratio_allocation", "fixture_class": "lavatory" }
+        },
+        "applies_when": { "classroom_attached": false },
+        "citations": [
+          { "doc": "22 1000", "section": "Part 2 — L schedule (L-1/L-2)", "doc_version": "250908", "note": "L-1/L-2 with F-4 at student restrooms." },
+          { "doc": "SDG", "section": "3.4-D (water temperature)", "doc_version": "02/26/2025", "note": "Tempered only: student RR lavatories (via remote TMV in custodial room)." }
+        ],
+        "verification_status": "verified"
+      },
+      {
+        "id": "req.restroom_student.lav.attached",
+        "kind": "fixture_requirement",
+        "key": "lav",
+        "label": "Lavatory",
+        "selector": { "kind": "fixed", "assembly": "L-1" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "baseline" },
+        "applies_when": { "classroom_attached": true },
+        "citations": [
+          { "doc": "22 1000", "section": "Part 2 — L schedule (L-1)", "doc_version": "250908", "note": "Student lavatory; kindergarten mounting height 25 in. per height table." }
+        ],
+        "verification_status": "verified",
+        "notes": "Classroom-attached single restroom: baseline one lavatory, editable in room detail."
+      },
+      {
+        "id": "req.restroom_student.floor_drain",
+        "kind": "fixture_requirement",
+        "key": "floor_drain",
+        "label": "Floor drains",
+        "selector": { "kind": "fixed", "assembly": "FD-1" },
+        "quantity": { "rule": "derived", "method": "restroom_floor_drains" },
+        "citations": [
+          { "doc": "SDG", "section": "3.4-B.7 (floor drains)", "doc_version": "02/26/2025", "note": "1 front-center per 2+ urinals; 1 per WC group, 2 if ≥4 WCs; trap primers; sloped floors." }
+        ],
+        "verification_status": "verified"
+      },
+      {
+        "id": "req.restroom_student.hose_bibb",
+        "kind": "fixture_requirement",
+        "key": "hose_bibb",
+        "label": "Hose bibb",
+        "selector": { "kind": "fixed", "assembly": "HB-8" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "rule" },
+        "applies_when": { "classroom_attached": false },
+        "citations": [
+          { "doc": "SDG", "section": "3.4-A.2 & 3.4-E.4", "doc_version": "02/26/2025", "note": "Hose bibb in recessed locked box at student restrooms (where floor drains present; locking cover). Classroom-attached single RRs exempted in MVP — OQ-7." }
+        ],
+        "verification_status": "verified"
+      }
+    ],
+    "obligations": [
+      "ob.rr.shutoff_terminal_wc",
+      "ob.rr.ir_flush_valves",
+      "ob.rr.metered_faucets",
+      "ob.rr.floors_sloped",
+      "ob.co.above_fixture",
+      "ob.co.terminal_wc",
+      "ob.wha.header",
+      "ob.iso.room",
+      "ob.iso.back_to_back",
+      "ob.tmv.placement"
+    ],
+    "triggers": ["fountain_at_entry"],
+    "citations": [
+      { "doc": "SDG", "section": "3.4-A.2/3 (student restroom kit) & 3.4-D", "doc_version": "02/26/2025", "note": "Full student-RR kit; tempered water at student RR lavatories." },
+      { "doc": "contracts/room-type-taxonomy.md", "section": "restroom_student", "doc_version": "0.2" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.restroom_staff",
+    "kind": "room_type_profile",
+    "room_type_code": "restroom_staff",
+    "water_class": "HC",
+    "fixture_requirements": [
+      {
+        "id": "req.restroom_staff.wc",
+        "kind": "fixture_requirement",
+        "key": "wc",
+        "label": "Water closet",
+        "selector": {
+          "kind": "by_age_band",
+          "standard": { "secondary_adult": "WC-3" },
+          "accessible": { "secondary_adult": "WC-4" }
+        },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "baseline" },
+        "citations": [
+          { "doc": "22 1000", "section": "Part 2 — WC schedule (WC-3/WC-4)", "doc_version": "250908", "note": "WC-3 secondary/adult; WC-4 secondary ADA 17–19 in." }
+        ],
+        "verification_status": "verified",
+        "notes": "Baseline one WC for a single-user staff restroom; edit in room detail if the room is a gang restroom."
+      },
+      {
+        "id": "req.restroom_staff.lav",
+        "kind": "fixture_requirement",
+        "key": "lav",
+        "label": "Lavatory",
+        "selector": {
+          "kind": "by_age_band",
+          "standard": { "secondary_adult": "L-3" },
+          "accessible": { "secondary_adult": "L-4" }
+        },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "baseline" },
+        "citations": [
+          { "doc": "22 1000", "section": "Part 2 — L schedule (L-3/L-4)", "doc_version": "250908", "note": "L-3/L-4 with F-5 at staff restrooms per planning record." },
+          { "doc": "SDG", "section": "3.4-D (water temperature)", "doc_version": "02/26/2025", "note": "Hot+cold: adult restrooms." }
+        ],
+        "verification_status": "verified"
+      },
+      {
+        "id": "req.restroom_staff.floor_drain",
+        "kind": "fixture_requirement",
+        "key": "floor_drain",
+        "label": "Floor drain",
+        "selector": { "kind": "fixed", "assembly": "FD-1" },
+        "quantity": { "rule": "derived", "method": "restroom_floor_drains" },
+        "citations": [
+          { "doc": "SDG", "section": "3.4-B.7 (floor drains)", "doc_version": "02/26/2025", "note": "Student AND staff restrooms get floor drains with trap primers." }
+        ],
+        "verification_status": "verified"
+      }
+    ],
+    "obligations": [
+      "ob.rr.shutoff_terminal_wc",
+      "ob.rr.ir_flush_valves",
+      "ob.rr.metered_faucets",
+      "ob.rr.floors_sloped",
+      "ob.co.above_fixture",
+      "ob.wha.header",
+      "ob.iso.room",
+      "ob.iso.back_to_back"
+    ],
+    "triggers": [],
+    "citations": [
+      { "doc": "SDG", "section": "3.4-A.2/3 (faculty restroom kit) & 3.4-D", "doc_version": "02/26/2025", "note": "Faculty-RR kit (panel locked, not keyed); hot+cold." },
+      { "doc": "contracts/room-type-taxonomy.md", "section": "restroom_staff", "doc_version": "0.2" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.restroom_single_user",
+    "kind": "room_type_profile",
+    "room_type_code": "restroom_single_user",
+    "water_class": "HC",
+    "fixture_requirements": [
+      {
+        "id": "req.restroom_single_user.wc",
+        "kind": "fixture_requirement",
+        "key": "wc",
+        "label": "Water closet",
+        "selector": {
+          "kind": "by_age_band",
+          "standard": { "secondary_adult": "WC-3" },
+          "accessible": { "secondary_adult": "WC-4" }
+        },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "rule" },
+        "citations": [
+          { "doc": "22 1000", "section": "Part 2 — WC schedule (WC-3/WC-4)", "doc_version": "250908" }
+        ],
+        "verification_status": "verified"
+      },
+      {
+        "id": "req.restroom_single_user.lav",
+        "kind": "fixture_requirement",
+        "key": "lav",
+        "label": "Lavatory",
+        "selector": {
+          "kind": "by_age_band",
+          "standard": { "secondary_adult": "L-3" },
+          "accessible": { "secondary_adult": "L-4" }
+        },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "rule" },
+        "citations": [
+          { "doc": "22 1000", "section": "Part 2 — L schedule (L-3/L-4)", "doc_version": "250908" }
+        ],
+        "verification_status": "verified"
+      },
+      {
+        "id": "req.restroom_single_user.floor_drain",
+        "kind": "fixture_requirement",
+        "key": "floor_drain",
+        "label": "Floor drain",
+        "selector": { "kind": "fixed", "assembly": "FD-1" },
+        "quantity": { "rule": "derived", "method": "restroom_floor_drains" },
+        "citations": [
+          { "doc": "SDG", "section": "3.4-B.7 (floor drains)", "doc_version": "02/26/2025" }
+        ],
+        "verification_status": "verified"
+      }
+    ],
+    "obligations": [
+      "ob.rr.shutoff_terminal_wc",
+      "ob.rr.ir_flush_valves",
+      "ob.rr.metered_faucets",
+      "ob.rr.floors_sloped",
+      "ob.co.above_fixture",
+      "ob.wha.header",
+      "ob.iso.room"
+    ],
+    "triggers": [],
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "restroom_single_user", "doc_version": "0.2", "note": "Not allowed for students except where Ed Specs say; water HC." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.custodial_closet",
+    "kind": "room_type_profile",
+    "room_type_code": "custodial_closet",
+    "water_class": "HC",
+    "fixture_requirements": [
+      {
+        "id": "req.custodial_closet.service_sink",
+        "kind": "fixture_requirement",
+        "key": "service_sink",
+        "label": "Hopper (service) sink",
+        "selector": { "kind": "fixed", "assembly": "SS-2" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "rule" },
+        "citations": [
+          { "doc": "contracts/room-type-taxonomy.md", "section": "custodial_closet", "doc_version": "0.2", "note": "SS-1/SS-2 hopper sink (cast iron only); SS-2 + F-6 per planning record." },
+          { "doc": "SDG", "section": "3.4-D (water temperature)", "doc_version": "02/26/2025", "note": "Hot+cold: custodial." }
+        ],
+        "verification_status": "verified"
+      },
+      {
+        "id": "req.custodial_closet.floor_drain",
+        "kind": "fixture_requirement",
+        "key": "floor_drain",
+        "label": "Floor drain at hopper",
+        "selector": { "kind": "fixed", "assembly": "FD-1" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "rule" },
+        "citations": [
+          { "doc": "SDG", "section": "3.4-B.7 (floor drains)", "doc_version": "02/26/2025", "note": "Custodial closet: floor drain at hopper." }
+        ],
+        "verification_status": "verified"
+      }
+    ],
+    "obligations": ["ob.co.above_fixture", "ob.wha.header", "ob.iso.room"],
+    "triggers": [],
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "custodial_closet", "doc_version": "0.2", "note": "TMV location host for adjacent student restrooms' tempered water." },
+      { "doc": "SDG", "section": "3.4-D", "doc_version": "02/26/2025" }
+    ],
+    "verification_status": "verified",
+    "display_note": "Custodial rooms host the tempered-water TMVs serving adjacent student restrooms (SDG 3.4-D)."
+  },
+  {
+    "id": "profile.custodial_receiving_storage",
+    "kind": "room_type_profile",
+    "room_type_code": "custodial_receiving_storage",
+    "water_class": "HC",
+    "fixture_requirements": [
+      {
+        "id": "req.custodial_receiving_storage.service_sink",
+        "kind": "fixture_requirement",
+        "key": "service_sink",
+        "label": "Service sink",
+        "selector": { "kind": "fixed", "assembly": "SS-1" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "rule" },
+        "citations": [
+          { "doc": "contracts/room-type-taxonomy.md", "section": "custodial_receiving_storage", "doc_version": "0.2", "note": "SS-1 at central custodial receiving/storage." }
+        ],
+        "verification_status": "verified"
+      },
+      {
+        "id": "req.custodial_receiving_storage.eew",
+        "kind": "fixture_requirement",
+        "key": "eew",
+        "label": "Emergency shower/eyewash",
+        "selector": { "kind": "fixed", "assembly": "EEW-1" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "rule" },
+        "citations": [
+          { "doc": "SDG", "section": "3.4-E.6", "doc_version": "02/26/2025", "note": "Emergency shower/eyewash at central custodial supplies storage; wording distinguishes school levels — encoded conservatively (required) for elementary receiving." },
+          { "doc": "Title 8 CCR / ANSI Z358.1", "section": "5162", "doc_version": "unversioned" }
+        ],
+        "verification_status": "draft",
+        "todo": "OQ-4: confirm the emergency shower/eyewash requirement scope and unit designation for ELEMENTARY receiving/storage (SDG 3.4-E.6 wording distinguishes school levels)."
+      }
+    ],
+    "obligations": ["ob.co.above_fixture", "ob.wha.header", "ob.iso.room", "ob.eew.tepid"],
+    "triggers": [],
+    "citations": [
+      { "doc": "SDG", "section": "3.4-E.6 & 3.4-D", "doc_version": "02/26/2025" },
+      { "doc": "contracts/room-type-taxonomy.md", "section": "custodial_receiving_storage", "doc_version": "0.2" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.electrical_room",
+    "kind": "room_type_profile",
+    "room_type_code": "electrical_room",
+    "water_class": "none",
+    "fixture_requirements": [
+      {
+        "id": "req.electrical_room.floor_drain",
+        "kind": "fixture_requirement",
+        "key": "floor_drain",
+        "label": "Floor drain (below grade only)",
+        "selector": { "kind": "fixed", "assembly": "FD-1" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "rule" },
+        "applies_when": { "floor_below_grade": true },
+        "citations": [
+          { "doc": "SDG", "section": "3.4-B.7 (floor drains)", "doc_version": "02/26/2025", "note": "Electrical rooms: floor drain only when below grade." }
+        ],
+        "verification_status": "verified"
+      }
+    ],
+    "obligations": [],
+    "triggers": [],
+    "citations": [
+      { "doc": "SDG", "section": "3.4-B.7", "doc_version": "02/26/2025" },
+      { "doc": "contracts/room-type-taxonomy.md", "section": "electrical_room", "doc_version": "0.2", "note": "Floor drain only when below grade." }
+    ],
+    "verification_status": "verified",
+    "display_note": "Floor drains at electrical rooms apply below grade only (SDG 3.4-B.7); above-grade electrical rooms have no plumbing requirements."
+  },
+  {
+    "id": "profile.mechanical_room",
+    "kind": "room_type_profile",
+    "room_type_code": "mechanical_room",
+    "water_class": "none",
+    "fixture_requirements": [
+      {
+        "id": "req.mechanical_room.floor_drain",
+        "kind": "fixture_requirement",
+        "key": "floor_drain",
+        "label": "Floor drain",
+        "selector": { "kind": "fixed", "assembly": "FD-1" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "rule" },
+        "citations": [
+          { "doc": "SDG", "section": "3.4-B.7 (floor drains)", "doc_version": "02/26/2025", "note": "Mechanical rooms get floor drains." }
+        ],
+        "verification_status": "verified"
+      },
+      {
+        "id": "req.mechanical_room.floor_sink",
+        "kind": "fixture_requirement",
+        "key": "floor_sink",
+        "label": "Floor sink",
+        "selector": { "kind": "fixed", "assembly": "FS-1" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "rule" },
+        "citations": [
+          { "doc": "SDG", "section": "3.4-B (floor sinks)", "doc_version": "02/26/2025", "note": "Floor sinks: boiler/mech rooms; water-heater drip pans." }
+        ],
+        "verification_status": "verified"
+      }
+    ],
+    "obligations": ["ob.mech.sill_cock", "ob.iso.room"],
+    "triggers": [],
+    "citations": [
+      { "doc": "SDG", "section": "3.4-B.7 & 3.4-E.4", "doc_version": "02/26/2025" },
+      { "doc": "contracts/room-type-taxonomy.md", "section": "mechanical_room", "doc_version": "0.2" }
+    ],
+    "verification_status": "verified",
+    "display_note": "Hosts the electric water heaters (equipment list is a future artifact — distances and WH/TMV/circulating-pump selection are out of MVP scope)."
+  },
+  {
+    "id": "profile.nurse_office",
+    "kind": "room_type_profile",
+    "room_type_code": "nurse_office",
+    "water_class": "HC",
+    "fixture_requirements": [
+      {
+        "id": "req.nurse_office.sink",
+        "kind": "fixture_requirement",
+        "key": "sink",
+        "label": "Sink assembly",
+        "selector": { "kind": "fixed", "assembly": "ST-2" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "baseline" },
+        "citations": [
+          { "doc": "22 1000", "section": "Part 2 — ST schedule (ST-2)", "doc_version": "250908", "note": "ST-2 mapped to Nurse (among others)." },
+          { "doc": "SDG", "section": "3.4-D (water temperature)", "doc_version": "02/26/2025", "note": "Hot+cold: nurse." }
+        ],
+        "verification_status": "verified"
+      }
+    ],
+    "obligations": ["ob.co.above_fixture", "ob.wha.header", "ob.iso.room"],
+    "triggers": [],
+    "citations": [
+      { "doc": "SDG", "section": "3.4-D", "doc_version": "02/26/2025", "note": "Hot+cold: nurse." },
+      { "doc": "contracts/room-type-taxonomy.md", "section": "nurse_office", "doc_version": "0.2" }
+    ],
+    "verification_status": "verified",
+    "display_note": "Circulating pump required if >25 ft from the water heater (SDG 3.4-D.6.c) — distance rules are out of MVP scope; rule parks politely when takeoff distances arrive."
+  },
+  {
+    "id": "profile.teachers_lounge",
+    "kind": "room_type_profile",
+    "room_type_code": "teachers_lounge",
+    "water_class": "HC",
+    "fixture_requirements": [
+      {
+        "id": "req.teachers_lounge.sink",
+        "kind": "fixture_requirement",
+        "key": "sink",
+        "label": "Sink assembly",
+        "selector": { "kind": "fixed", "assembly": "ST-2" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "baseline" },
+        "citations": [
+          { "doc": "22 1000", "section": "Part 2 — ST schedule (ST-2)", "doc_version": "250908", "note": "ST-2 mapped to Faculty Lounge; kitchen-type sinks 1.8 gpm max." }
+        ],
+        "verification_status": "verified"
+      }
+    ],
+    "obligations": ["ob.co.above_fixture", "ob.wha.header", "ob.iso.room"],
+    "triggers": [],
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "teachers_lounge", "doc_version": "0.2", "note": "ST-2; kitchen sink 1.8 gpm; water HC." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.parent_center",
+    "kind": "room_type_profile",
+    "room_type_code": "parent_center",
+    "water_class": "HC",
+    "fixture_requirements": [
+      {
+        "id": "req.parent_center.sink",
+        "kind": "fixture_requirement",
+        "key": "sink",
+        "label": "Sink assembly",
+        "selector": { "kind": "fixed", "assembly": "ST-2" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "baseline" },
+        "citations": [
+          { "doc": "22 1000", "section": "Part 2 — ST schedule (ST-2)", "doc_version": "250908", "note": "ST-2 mapped to Parent Center." }
+        ],
+        "verification_status": "verified"
+      }
+    ],
+    "obligations": ["ob.co.above_fixture", "ob.wha.header", "ob.iso.room"],
+    "triggers": [],
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "parent_center", "doc_version": "0.2" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.library",
+    "kind": "room_type_profile",
+    "room_type_code": "library",
+    "water_class": "none",
+    "fixture_requirements": [],
+    "obligations": [],
+    "triggers": [],
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "library", "doc_version": "0.2", "note": "No rule hooks; typically no plumbing." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.library_workroom",
+    "kind": "room_type_profile",
+    "room_type_code": "library_workroom",
+    "water_class": "HC",
+    "fixture_requirements": [
+      {
+        "id": "req.library_workroom.sink",
+        "kind": "fixture_requirement",
+        "key": "sink",
+        "label": "Sink assembly",
+        "selector": { "kind": "fixed", "assembly": "ST-2" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "baseline" },
+        "citations": [
+          { "doc": "contracts/room-type-taxonomy.md", "section": "library_workroom", "doc_version": "0.2", "note": "ST-2; water HC." }
+        ],
+        "verification_status": "verified"
+      }
+    ],
+    "obligations": ["ob.co.above_fixture", "ob.wha.header", "ob.iso.room"],
+    "triggers": [],
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "library_workroom", "doc_version": "0.2" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.multipurpose_room",
+    "kind": "room_type_profile",
+    "room_type_code": "multipurpose_room",
+    "water_class": "none",
+    "fixture_requirements": [],
+    "obligations": [],
+    "triggers": ["fountain_at_lobby"],
+    "citations": [
+      { "doc": "SDG", "section": "2.1-K.2.a", "doc_version": "02/26/2025", "note": "Fountain + bottle filler at MPR/auditoria lobbies." },
+      { "doc": "contracts/room-type-taxonomy.md", "section": "multipurpose_room", "doc_version": "0.2" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.kitchen_serving",
+    "kind": "room_type_profile",
+    "room_type_code": "kitchen_serving",
+    "water_class": "HC",
+    "fixture_requirements": [
+      {
+        "id": "req.kitchen_serving.hand_sink",
+        "kind": "fixture_requirement",
+        "key": "hand_sink",
+        "label": "Hand sink",
+        "selector": { "kind": "fixed", "assembly": "L-5" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "rule" },
+        "citations": [
+          { "doc": "contracts/room-type-taxonomy.md", "section": "kitchen_serving", "doc_version": "0.2", "note": "Hand sink required at serving/warming kitchens." }
+        ],
+        "verification_status": "draft",
+        "todo": "OQ-12: the hand-sink designation for serving kitchens is mapped to L-5 (Advance TABCO hand sink) as a draft — verify against 22 1000 / food-service standards."
+      },
+      {
+        "id": "req.kitchen_serving.floor_sink",
+        "kind": "fixture_requirement",
+        "key": "floor_sink",
+        "label": "Floor sink",
+        "selector": { "kind": "fixed", "assembly": "FS-1" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "rule" },
+        "citations": [
+          { "doc": "contracts/room-type-taxonomy.md", "section": "kitchen_serving", "doc_version": "0.2", "note": "Mop/floor sink at serving kitchens." },
+          { "doc": "SDG", "section": "3.4-B (floor sinks)", "doc_version": "02/26/2025" }
+        ],
+        "verification_status": "verified"
+      }
+    ],
+    "obligations": ["ob.co.above_fixture", "ob.wha.header", "ob.iso.room"],
+    "triggers": [],
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "kitchen_serving", "doc_version": "0.2", "note": "No grease interceptor when no grease-producing equipment present (SDG 3.4-B.5)." },
+      { "doc": "SDG", "section": "3.4-B.5 (grease/FOG)", "doc_version": "02/26/2025" }
+    ],
+    "verification_status": "verified",
+    "display_note": "Serving-only kitchen (no cooking): no grease interceptor — SDG 3.4-B.5 ties interceptors to grease-producing equipment, and this room has none. Verify scope with the District per project."
+  },
+  {
+    "id": "profile.lunch_shelter",
+    "kind": "room_type_profile",
+    "room_type_code": "lunch_shelter",
+    "water_class": "none",
+    "fixture_requirements": [
+      {
+        "id": "req.lunch_shelter.pavilion_drain",
+        "kind": "fixture_requirement",
+        "key": "pavilion_drain",
+        "label": "Pavilion floor drains",
+        "selector": { "kind": "fixed", "assembly": "FD-4" },
+        "quantity": {
+          "rule": "designer_quantity",
+          "suggest": { "method": "judgment", "n": 1, "basis_text": "Layout-dependent (pavilion area and washdown pattern) — engineering judgment; minimum one." }
+        },
+        "citations": [
+          { "doc": "SDG", "section": "3.4-B.7 (floor drains)", "doc_version": "02/26/2025", "note": "Lunch shelters: cast iron with basket, no primer." }
+        ],
+        "verification_status": "verified"
+      },
+      {
+        "id": "req.lunch_shelter.hose_bibb",
+        "kind": "fixture_requirement",
+        "key": "hose_bibb",
+        "label": "Hose bibbs",
+        "selector": {
+          "kind": "choice",
+          "options": [
+            { "assembly": "HB-1", "consequence": "Exterior hose bibb type 1 — HB-1 vs HB-2 follows wall construction (stucco vs CMU); mapping to verify." },
+            { "assembly": "HB-2", "consequence": "Exterior hose bibb type 2 — HB-1 vs HB-2 follows wall construction (stucco vs CMU); mapping to verify." }
+          ]
+        },
+        "quantity": {
+          "rule": "designer_quantity",
+          "suggest": { "method": "judgment", "n": 1, "basis_text": "Hose coverage of the eating area — engineering judgment; ¾ in. bibbs on a 1 in. line." }
+        },
+        "citations": [
+          { "doc": "contracts/room-type-taxonomy.md", "section": "lunch_shelter", "doc_version": "0.2", "note": "Hose bibbs ¾ in. on 1 in. line at lunch shelters." },
+          { "doc": "SDG", "section": "3.4-E.4 (hose bibbs)", "doc_version": "02/26/2025", "note": "Hose bibbs outside eating areas." }
+        ],
+        "verification_status": "draft",
+        "todo": "OQ-13: hose-bibb designation depends on wall construction (HB-1 vs HB-2 mapping to verify) — designer chooses in the MVP."
+      }
+    ],
+    "obligations": ["ob.lunch.drain_note"],
+    "triggers": ["fountain_at_lunch_shelter"],
+    "citations": [
+      { "doc": "SDG", "section": "2.1-K.2.a & 3.4-B.7", "doc_version": "02/26/2025" },
+      { "doc": "contracts/room-type-taxonomy.md", "section": "lunch_shelter", "doc_version": "0.2" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.play_yard",
+    "kind": "room_type_profile",
+    "room_type_code": "play_yard",
+    "water_class": "none",
+    "fixture_requirements": [],
+    "obligations": [],
+    "triggers": ["fountain_at_play_area"],
+    "citations": [
+      { "doc": "SDG", "section": "2.1-K.2.a.4", "doc_version": "02/26/2025", "note": "Fountain + bottle filler required at exterior play areas." },
+      { "doc": "contracts/room-type-taxonomy.md", "section": "play_yard", "doc_version": "0.2" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.lactation_station",
+    "kind": "room_type_profile",
+    "room_type_code": "lactation_station",
+    "water_class": "HC",
+    "fixture_requirements": [
+      {
+        "id": "req.lactation_station.sink",
+        "kind": "fixture_requirement",
+        "key": "sink",
+        "label": "Sink assembly",
+        "selector": { "kind": "fixed", "assembly": "ST-3" },
+        "quantity": {
+          "rule": "designer_quantity",
+          "suggest": { "method": "fixed", "n": 1 }
+        },
+        "citations": [
+          { "doc": "contracts/room-type-taxonomy.md", "section": "lactation_station", "doc_version": "0.2", "note": "ST-3 sink assembly; water HC." }
+        ],
+        "verification_status": "verified"
+      }
+    ],
+    "obligations": ["ob.co.above_fixture", "ob.wha.header", "ob.iso.room"],
+    "triggers": [],
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "lactation_station", "doc_version": "0.2" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.makerspace",
+    "kind": "room_type_profile",
+    "room_type_code": "makerspace",
+    "water_class": "HC",
+    "fixture_requirements": [
+      {
+        "id": "req.makerspace.sink",
+        "kind": "fixture_requirement",
+        "key": "sink",
+        "label": "Sink assembly",
+        "selector": { "kind": "fixed", "assembly": "ST-3" },
+        "quantity": { "rule": "fixed", "n": 1, "basis": "baseline" },
+        "citations": [
+          { "doc": "contracts/room-type-taxonomy.md", "section": "makerspace", "doc_version": "0.2", "note": "ST-3; water HC." }
+        ],
+        "verification_status": "verified"
+      }
+    ],
+    "obligations": ["ob.co.above_fixture", "ob.wha.header", "ob.iso.room"],
+    "triggers": [],
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "makerspace", "doc_version": "0.2" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "profile.admin_office",
+    "kind": "room_type_profile",
+    "room_type_code": "admin_office",
+    "water_class": "none",
+    "fixture_requirements": [],
+    "obligations": [],
+    "triggers": [],
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "admin_office", "doc_version": "0.2", "note": "EWC-2 (replacement-in-kind only) context; no new-construction requirement." }
+    ],
+    "verification_status": "verified",
+    "display_note": "Electric water coolers (EWC-2) are replacement-in-kind only — nothing required on new construction."
+  },
+  {
+    "id": "profile.plant_manager_office",
+    "kind": "room_type_profile",
+    "room_type_code": "plant_manager_office",
+    "water_class": "none",
+    "fixture_requirements": [],
+    "obligations": [],
+    "triggers": [],
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "plant_manager_office", "doc_version": "0.2", "note": "No rule hooks." }
+    ],
+    "verification_status": "verified"
+  }
+]

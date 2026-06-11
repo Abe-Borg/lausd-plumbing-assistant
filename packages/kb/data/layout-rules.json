@@ -1,0 +1,54 @@
+{
+  "restroom_floor_drains": {
+    "id": "rule.floor_drains.restroom",
+    "kind": "layout_rule",
+    "rule": "restroom_floor_drains",
+    "text": "Restroom floor drains: one front-center of every group of 2 or more urinals; one per water-closet group, two when the group has 4 or more water closets. All with trap primers; slope floors 1/8 in./ft.",
+    "params": {
+      "urinal_group_min": 2,
+      "fd_per_urinal_group": 1,
+      "fd_per_wc_group": 1,
+      "wc_group_double_at": 4
+    },
+    "citations": [
+      {
+        "doc": "SDG",
+        "section": "3.4-B.7 (floor drains)",
+        "doc_version": "02/26/2025",
+        "note": "Student+staff RRs: 1 front-center per 2+ urinals; 1 per WC group, 2 if ≥4 WCs."
+      }
+    ],
+    "verification_status": "verified"
+  },
+  "fountains": {
+    "id": "rule.fountains",
+    "kind": "placement_rule",
+    "rule": "fountains",
+    "locations": [
+      { "trigger": "fountain_at_entry", "text": "At all student restroom entries (interior and exterior)" },
+      { "trigger": "fountain_at_lobby", "text": "At multipurpose-room / auditorium lobbies" },
+      { "trigger": "fountain_at_play_area", "text": "At play areas and fields" },
+      { "trigger": "fountain_at_lunch_shelter", "text": "At lunch shelters" }
+    ],
+    "unit_selection": {
+      "single_band": "DF-12",
+      "mixed_or_outdoor_public": "DF-12A"
+    },
+    "notes": "MVP simplified unit mapping: single age band served → DF-12 (child height); multiple bands served or outdoor/public mixed use → DF-12A (dual height) — prefer dual-height when both bands are served. Classroom-attached single restrooms (kindergarten pattern) do not generate corridor entry fountains — see OQ-7.",
+    "citations": [
+      {
+        "doc": "SDG",
+        "section": "2.1-K.2.a (mandatory bottle fillers / fountains)",
+        "doc_version": "02/26/2025",
+        "note": "Combination fountain + bottle filler at all student RR entries (int+ext), MPR/auditoria lobbies, play areas/fields, lunch shelters."
+      },
+      {
+        "doc": "22 1000",
+        "section": "Part 2 — DF schedule commentary",
+        "doc_version": "250908"
+      }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-5: verify the DF-12 vs DF-12A unit-selection mapping; OQ-7: confirm entry-fountain treatment at classroom-attached restrooms."
+  }
+}

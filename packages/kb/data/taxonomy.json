@@ -1,0 +1,494 @@
+[
+  {
+    "code": "restroom_student",
+    "display_name": "Student restroom",
+    "aliases": [
+      "boys/girls RR",
+      "student toilet"
+    ],
+    "water_class_raw": "T"
+  },
+  {
+    "code": "restroom_staff",
+    "display_name": "Staff/faculty/adult restroom",
+    "aliases": [
+      "faculty RR",
+      "adult RR",
+      "visitor RR"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "restroom_single_user",
+    "display_name": "Single-user restroom",
+    "aliases": [
+      "unisex RR",
+      "single accommodation"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "shower_locker_student",
+    "display_name": "Student shower/locker room",
+    "aliases": [
+      "gang shower",
+      "PE lockers"
+    ],
+    "water_class_raw": "T"
+  },
+  {
+    "code": "shower_staff",
+    "display_name": "Staff/special-ed shower",
+    "aliases": [
+      "faculty shower"
+    ],
+    "water_class_raw": "HC/T"
+  },
+  {
+    "code": "drying_room",
+    "display_name": "Drying room (adjacent showers)",
+    "aliases": [],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "lactation_station",
+    "display_name": "Lactation station",
+    "aliases": [
+      "mother's room"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "classroom_general",
+    "display_name": "General classroom",
+    "aliases": [
+      "std classroom"
+    ],
+    "water_class_raw": "C"
+  },
+  {
+    "code": "classroom_kindergarten",
+    "display_name": "Kindergarten classroom",
+    "aliases": [
+      "TK",
+      "K room"
+    ],
+    "water_class_raw": "C"
+  },
+  {
+    "code": "classroom_eec",
+    "display_name": "Early Education Center classroom",
+    "aliases": [
+      "EEC",
+      "preschool",
+      "CDC"
+    ],
+    "water_class_raw": "T"
+  },
+  {
+    "code": "classroom_special_ed",
+    "display_name": "Special education classroom",
+    "aliases": [
+      "SDC",
+      "special day class"
+    ],
+    "water_class_raw": "C"
+  },
+  {
+    "code": "classroom_flexible",
+    "display_name": "Flexible classroom",
+    "aliases": [
+      "flex room"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "child_development",
+    "display_name": "Child development room",
+    "aliases": [],
+    "water_class_raw": "C"
+  },
+  {
+    "code": "science_lab",
+    "display_name": "Science lab (MS/HS)",
+    "aliases": [
+      "chemistry",
+      "biology",
+      "physics",
+      "physiology",
+      "modern science"
+    ],
+    "water_class_raw": "M"
+  },
+  {
+    "code": "science_lab_6th",
+    "display_name": "6th-grade science / flex science",
+    "aliases": [
+      "6th gr science"
+    ],
+    "water_class_raw": "M"
+  },
+  {
+    "code": "science_lab_flex",
+    "display_name": "Flexible science classroom",
+    "aliases": [
+      "flex science"
+    ],
+    "water_class_raw": "M"
+  },
+  {
+    "code": "science_prep",
+    "display_name": "Science prep/workroom",
+    "aliases": [
+      "prep room",
+      "teacher workroom (science)"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "forensic_lab",
+    "display_name": "Forensic lab",
+    "aliases": [],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "robotics_lab",
+    "display_name": "Robotics lab",
+    "aliases": [],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "makerspace",
+    "display_name": "Makerspace",
+    "aliases": [],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "art_classroom",
+    "display_name": "Art classroom",
+    "aliases": [],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "ceramics_classroom",
+    "display_name": "Ceramics classroom",
+    "aliases": [
+      "pottery"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "graphics_design",
+    "display_name": "Graphics design classroom",
+    "aliases": [],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "digital_imaging",
+    "display_name": "Digital imaging",
+    "aliases": [],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "photography_lab",
+    "display_name": "Photography lab",
+    "aliases": [
+      "photo lab"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "photo_negative_room",
+    "display_name": "Photo negative/film processing",
+    "aliases": [
+      "darkroom"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "culinary_arts",
+    "display_name": "Culinary arts classroom",
+    "aliases": [],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "homemaking",
+    "display_name": "Homemaking",
+    "aliases": [
+      "home economics"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "auto_shop",
+    "display_name": "Auto shop",
+    "aliases": [
+      "autoshop"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "wood_shop",
+    "display_name": "Wood shop",
+    "aliases": [
+      "industrial arts"
+    ],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "agriculture_classroom",
+    "display_name": "Agriculture/horticulture",
+    "aliases": [
+      "ag room"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "cad_drafting_lab",
+    "display_name": "CAD/drafting lab",
+    "aliases": [],
+    "water_class_raw": "C"
+  },
+  {
+    "code": "instrumental_music",
+    "display_name": "Instrumental music",
+    "aliases": [
+      "band room"
+    ],
+    "water_class_raw": "C"
+  },
+  {
+    "code": "patient_care_classroom",
+    "display_name": "Patient care classroom",
+    "aliases": [],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "sports_medicine",
+    "display_name": "Sports medicine classroom",
+    "aliases": [
+      "athletic training"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "nurse_office",
+    "display_name": "Nurse office / first aid",
+    "aliases": [
+      "health office",
+      "therapy room"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "admin_office",
+    "display_name": "Administration area",
+    "aliases": [
+      "main office"
+    ],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "teachers_lounge",
+    "display_name": "Faculty lounge",
+    "aliases": [
+      "staff lounge"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "parent_center",
+    "display_name": "Parent center",
+    "aliases": [],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "library",
+    "display_name": "Library / media center",
+    "aliases": [
+      "LMC"
+    ],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "library_workroom",
+    "display_name": "Library workroom",
+    "aliases": [],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "student_store",
+    "display_name": "Student store",
+    "aliases": [],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "plant_manager_office",
+    "display_name": "Plant manager office",
+    "aliases": [],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "kitchen",
+    "display_name": "Kitchen (food service)",
+    "aliases": [
+      "cafeteria kitchen"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "kitchen_serving",
+    "display_name": "Serving/warming kitchen (no cooking)",
+    "aliases": [
+      "servery",
+      "warming kitchen",
+      "serving area"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "cafeteria_dining",
+    "display_name": "Cafeteria / dining",
+    "aliases": [
+      "MPR dining"
+    ],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "multipurpose_room",
+    "display_name": "Multipurpose room",
+    "aliases": [
+      "MPR"
+    ],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "auditorium",
+    "display_name": "Auditorium",
+    "aliases": [],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "concessions",
+    "display_name": "Concessions stand",
+    "aliases": [
+      "snack bar"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "lunch_shelter",
+    "display_name": "Lunch shelter / outdoor eating",
+    "aliases": [],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "gymnasium",
+    "display_name": "Gymnasium",
+    "aliases": [
+      "gym"
+    ],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "athletic_field_sanitary",
+    "display_name": "Field sanitary unit",
+    "aliases": [
+      "field restroom bldg"
+    ],
+    "water_class_raw": "T"
+  },
+  {
+    "code": "custodial_closet",
+    "display_name": "Custodial closet",
+    "aliases": [
+      "janitor closet",
+      "hopper room"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "custodial_receiving_storage",
+    "display_name": "Central custodial receiving/storage",
+    "aliases": [
+      "receiving"
+    ],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "boiler_room",
+    "display_name": "Boiler room",
+    "aliases": [],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "mechanical_room",
+    "display_name": "Mechanical equipment room",
+    "aliases": [
+      "mech room"
+    ],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "electrical_room",
+    "display_name": "Electrical room",
+    "aliases": [],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "pool_equipment_room",
+    "display_name": "Pool equipment/chlorination room",
+    "aliases": [
+      "chem storage (pool)"
+    ],
+    "water_class_raw": "TP"
+  },
+  {
+    "code": "parking_garage_subterranean",
+    "display_name": "Subterranean parking",
+    "aliases": [
+      "basement garage"
+    ],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "laundry_room",
+    "display_name": "Laundry room",
+    "aliases": [],
+    "water_class_raw": "HC"
+  },
+  {
+    "code": "trash_area_uncovered",
+    "display_name": "Uncovered trash area",
+    "aliases": [
+      "trash enclosure"
+    ],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "lath_house",
+    "display_name": "Lath house",
+    "aliases": [
+      "greenhouse"
+    ],
+    "water_class_raw": "C"
+  },
+  {
+    "code": "corridor_walkway",
+    "display_name": "Corridor / exterior walkway",
+    "aliases": [
+      "hall"
+    ],
+    "water_class_raw": "—"
+  },
+  {
+    "code": "play_yard",
+    "display_name": "Play yard / exterior play area",
+    "aliases": [
+      "playground",
+      "courts",
+      "play area"
+    ],
+    "water_class_raw": "—"
+  }
+]

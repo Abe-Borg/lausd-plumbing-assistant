@@ -1,0 +1,275 @@
+[
+  {
+    "id": "ob.rr.shutoff_terminal_wc",
+    "kind": "obligation",
+    "text": "Restroom shutoff valve above the upper terminal water closet, behind a locked access panel — keyed panel at student restrooms, unkeyed at faculty restrooms.",
+    "applies_to": "Student, staff and single-user restrooms",
+    "citations": [
+      { "doc": "SDG", "section": "3.4-A.2/3 (restroom kit)", "doc_version": "02/26/2025", "note": "RR shutoff above upper terminal WC behind locked panel (keyed for students, unkeyed for faculty)." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.rr.ir_flush_valves",
+    "kind": "obligation",
+    "text": "Battery-powered infrared flush valves with manual override; hardwired flush sensors are not permitted.",
+    "applies_to": "All flushometer fixtures (water closets, urinals)",
+    "schedule_footer": true,
+    "citations": [
+      { "doc": "SDG", "section": "3.4-A.2/3 (restroom kit)", "doc_version": "02/26/2025", "note": "IR battery flush valves w/ manual override (NO hardwire)." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.rr.metered_faucets",
+    "kind": "obligation",
+    "text": "Push-button self-metering lavatory faucets; ADA operation ≥10 seconds at ≤5 lb force.",
+    "applies_to": "Restroom lavatories",
+    "schedule_footer": true,
+    "citations": [
+      { "doc": "SDG", "section": "3.4-A.2/3 (restroom kit)", "doc_version": "02/26/2025", "note": "Push-button metered faucets." },
+      { "doc": "22 1000", "section": "Part 2 — F schedule (F-4)", "doc_version": "250908" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.rr.floors_sloped",
+    "kind": "obligation",
+    "text": "Slope restroom floors to floor drains at 1/8 in. per foot.",
+    "applies_to": "Restrooms with floor drains",
+    "citations": [
+      { "doc": "SDG", "section": "3.4-A.2/3 (restroom kit) & 3.4-B.7", "doc_version": "02/26/2025", "note": "Floor drains w/ primers + sloped floors; floor-drain floors slope 1/8 in./ft." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.co.above_fixture",
+    "kind": "obligation",
+    "text": "Full-size cleanout above every urinal, lavatory, drinking fountain, bottle filler and sink; at lavatories ≤6 in. above the backsplash, aligned to the fixture centerline (offset where a mirror occurs).",
+    "applies_to": "All fixtures listed",
+    "schedule_footer": true,
+    "citations": [
+      { "doc": "SDG", "section": "3.4 (cleanouts)", "doc_version": "02/26/2025", "note": "Cleanouts above every urinal, lav, DF, bottle filler, sink; lav CO at centerline ≤6 in. above backsplash, offset for mirrors." },
+      { "doc": "22 1000", "section": "Part 3 (cleanout execution)", "doc_version": "250908" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.co.terminal_wc",
+    "kind": "obligation",
+    "text": "Cleanout above the upper-terminal water closet where multiple water closets occur on a branch.",
+    "applies_to": "Water closet groups",
+    "citations": [
+      { "doc": "SDG", "section": "3.4 (cleanouts)", "doc_version": "02/26/2025", "note": "Upper-terminal WC cleanout only when multiple WCs." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.wha.header",
+    "kind": "obligation",
+    "text": "Water hammer arrestor (WHA-1) on the fixture header; air chambers are not approved.",
+    "applies_to": "Fixture headers (flush valves, metered faucets)",
+    "schedule_footer": true,
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — WHA schedule (WHA-1)", "doc_version": "250908", "note": "Mechanical water hammer arrestors only; air chambers not approved." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.iso.room",
+    "kind": "obligation",
+    "text": "Isolation valve within the room, 3–7 ft AFF, in a recessed locked box, controlling only this room.",
+    "applies_to": "Every room with plumbing fixtures",
+    "citations": [
+      { "doc": "SDG", "section": "3.4 (isolation valves)", "doc_version": "02/26/2025", "note": "Isolation valves: every room with fixtures (3–7 ft AFF, control only that room, recessed locked box)." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.iso.floor",
+    "kind": "obligation",
+    "text": "Isolation valves per floor in multi-story buildings.",
+    "applies_to": "Multi-story buildings",
+    "citations": [
+      { "doc": "SDG", "section": "3.4 (isolation valves)", "doc_version": "02/26/2025", "note": "Per-floor isolation valves." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.iso.back_to_back",
+    "kind": "obligation",
+    "text": "Back-to-back restrooms are isolated separately.",
+    "applies_to": "Adjacent restroom pairs",
+    "citations": [
+      { "doc": "SDG", "section": "3.4 (isolation valves)", "doc_version": "02/26/2025", "note": "Back-to-back restrooms isolated separately." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.ap.max_two_valves",
+    "kind": "obligation",
+    "text": "Maximum two valves per access panel.",
+    "applies_to": "Valve access panels",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 3 (access panels)", "doc_version": "250908", "note": "Max 2 valves per access panel." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.df.filter_provision",
+    "kind": "obligation",
+    "text": "Provide future filter provision at every drinking fountain / bottle filler: DFWF-1 filter head + bypass in a locked panel.",
+    "applies_to": "All drinking fountains and bottle fillers",
+    "schedule_footer": true,
+    "citations": [
+      { "doc": "SDG", "section": "2.1-K", "doc_version": "02/26/2025", "note": "All DF/BF: future filter provision (DFWF-1 head + bypass in locked panel)." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.df.brass_free",
+    "kind": "obligation",
+    "text": "Brass-free waterways at all drinking fountains and bottle fillers.",
+    "applies_to": "All drinking fountains and bottle fillers",
+    "citations": [
+      { "doc": "SDG", "section": "2.1-K", "doc_version": "02/26/2025", "note": "All DF/BF: brass-free waterways." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.df.exterior_hose_bibb",
+    "kind": "obligation",
+    "text": "Recessed hose bibb beneath each exterior drinking fountain.",
+    "applies_to": "Exterior drinking fountains",
+    "citations": [
+      { "doc": "SDG", "section": "3.4-E.4 (hose bibbs)", "doc_version": "02/26/2025", "note": "Hose bibbs under exterior DFs." },
+      { "doc": "contracts/room-type-taxonomy.md", "section": "play_yard", "doc_version": "0.2", "note": "Exterior units vandal-resistant w/ recessed hose bibb beneath." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.df.exterior_finish",
+    "kind": "obligation",
+    "text": "Exterior fountain/bottle-filler units are vandal-resistant; sun-exposed stainless receives solar-reflective powder coat.",
+    "applies_to": "Exterior drinking fountains and bottle fillers",
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "play_yard", "doc_version": "0.2", "note": "Sun-exposed stainless gets solar-reflective powder coat." },
+      { "doc": "22 1000", "section": "Part 2 — DF schedule commentary", "doc_version": "250908" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.df.alcove",
+    "kind": "obligation",
+    "text": "Locate fountains/bottle fillers in CBC-compliant alcoves on accessible routes.",
+    "applies_to": "Fountains/bottle fillers at corridors and walkways",
+    "citations": [
+      { "doc": "SDG", "section": "2.1-K", "doc_version": "02/26/2025", "note": "Alcove rules (CBC) on accessible routes." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.lunch.drain_note",
+    "kind": "obligation",
+    "text": "Lunch-shelter pavilion drains: cast iron with basket strainer, no trap primer — daily washdown keeps traps charged.",
+    "applies_to": "Lunch shelters / outdoor eating pavilions",
+    "schedule_footer": true,
+    "citations": [
+      { "doc": "SDG", "section": "3.4-B.7 (floor drains)", "doc_version": "02/26/2025", "note": "Lunch shelters: CI w/ basket, no primer." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.tmv.placement",
+    "kind": "obligation",
+    "text": "Tempered water regulating valve (TMV) near the outlets served; locate in the custodial room or similar — not inside the restroom.",
+    "applies_to": "Tempered water service (student restroom lavatories and similar)",
+    "citations": [
+      { "doc": "SDG", "section": "3.4-D (water temperature)", "doc_version": "02/26/2025", "note": "Tempered 95–100°F; TMV near outlet but NOT in restroom — custodial room." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.temp.setpoints",
+    "kind": "obligation",
+    "text": "Hot water 120°F at the heater / 115°F at the furthest outlet; tempered water 95–100°F; tepid water 60–100°F.",
+    "applies_to": "Domestic hot/tempered/tepid systems",
+    "citations": [
+      { "doc": "SDG", "section": "3.4-D (water temperature)", "doc_version": "02/26/2025", "note": "120°F at heater / 115°F furthest outlet; tempered 95–100°F; tepid 60–100°F." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.lav.header_sizing",
+    "kind": "obligation",
+    "text": "Lavatory header sizing: ½ in. for 2 lavatories, ¾ in. for 3–4, 1 in. for 5–6.",
+    "applies_to": "Lavatory groups",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — header sizing", "doc_version": "250908", "note": "Lavs ½/¾/1 in. for 2 / 3–4 / 5–6." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.lav.ada_insulation",
+    "kind": "obligation",
+    "text": "Insulate exposed piping under accessible lavatories (Plumberex / Lav-Guard type).",
+    "applies_to": "Accessible lavatories",
+    "schedule_footer": true,
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — L schedule commentary", "doc_version": "250908", "note": "Insulation under accessible lavs (Plumberex/Lav-Guard)." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.lav.backing",
+    "kind": "obligation",
+    "text": "Steel backing plate at wall-hung lavatories.",
+    "applies_to": "Wall-hung lavatories",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — L schedule commentary", "doc_version": "250908", "note": "Steel backing plate spec." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.lav.supplies",
+    "kind": "obligation",
+    "text": "Through-wall supplies are IPS brass nipple only (no braided/flex connectors, no copper MIP sweat adapters); loose-key square-shank lock-shield stops; each faucet on its own ¼-turn angle stop.",
+    "applies_to": "Lavatory supplies",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — L schedule / prohibitions", "doc_version": "250908", "note": "IPS brass nipple only; no braided SS flex supplies; loose-key square-shank lock-shield stops; ¼-turn angle stop per faucet." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.fd.trap_primer",
+    "kind": "obligation",
+    "text": "Trap primer at each interior floor drain.",
+    "applies_to": "Interior floor drains (lunch-shelter pavilion drains excepted)",
+    "schedule_footer": true,
+    "citations": [
+      { "doc": "SDG", "section": "3.4-B.7 (floor drains)", "doc_version": "02/26/2025", "note": "Floor drains w/ trap primers." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.mech.sill_cock",
+    "kind": "obligation",
+    "text": "Sill cock in boiler/mechanical rooms.",
+    "applies_to": "Boiler and mechanical equipment rooms",
+    "citations": [
+      { "doc": "SDG", "section": "3.4-E.4 (hose bibbs / sill cocks)", "doc_version": "02/26/2025", "note": "Sill cocks in boiler/mech rooms + roofs w/ PV/skylights/HVAC." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ob.eew.tepid",
+    "kind": "obligation",
+    "text": "Emergency shower/eyewash served with tepid water (60–100°F) from a potable connection.",
+    "applies_to": "Emergency shower/eyewash fixtures",
+    "citations": [
+      { "doc": "Title 8 CCR / ANSI Z358.1", "section": "5162", "doc_version": "unversioned", "note": "Tepid water; potable connection." },
+      { "doc": "SDG", "section": "3.4-D (water temperature)", "doc_version": "02/26/2025", "note": "Tepid only: emergency shower/eyewash." }
+    ],
+    "verification_status": "verified"
+  }
+]

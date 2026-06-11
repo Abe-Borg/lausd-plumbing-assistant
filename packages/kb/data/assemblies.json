@@ -1,0 +1,714 @@
+[
+  {
+    "id": "WC-1",
+    "kind": "assembly",
+    "family": "WC",
+    "display_name": "Water closet — elementary",
+    "description_short": "Water closet, floor mounted, elementary students; flushometer valve, 1.28 gpf max.",
+    "components": [
+      { "kind": "bowl", "note": "Approved bowl products per 22 1000 WC schedule — not yet extracted (OQ-8)." },
+      { "kind": "flush_valve", "ref": "FLV-1", "note": "FLV-1/FLV-1a per sensor/manual split — see OQ-9." },
+      { "kind": "seat", "note": "Seat model per 22 1000 — not yet extracted (OQ-8)." }
+    ],
+    "approved_products": [],
+    "applicability": { "age_band": ["elementary"], "ada": false, "user_class": "student" },
+    "obligations": [],
+    "spec_section": "22 1000",
+    "mounting_height_ref": "water_closet_seat",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — WC schedule (WC-1…WC-6)", "doc_version": "250908", "note": "WC-1 elementary; WC variants by age band and accessibility." },
+      { "doc": "22 1000", "section": "Part 2 — flow maxima", "doc_version": "250908", "note": "Water closets 1.28 gpf maximum." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "WC-2",
+    "kind": "assembly",
+    "family": "WC",
+    "display_name": "Water closet — elementary, accessible",
+    "description_short": "Water closet, floor mounted, elementary students, accessible; flushometer valve, 1.28 gpf max.",
+    "components": [
+      { "kind": "bowl", "note": "Approved bowl products per 22 1000 WC schedule — not yet extracted (OQ-8)." },
+      { "kind": "flush_valve", "ref": "FLV-1", "note": "FLV-1/FLV-1a per sensor/manual split — see OQ-9." },
+      { "kind": "seat", "note": "Seat model per 22 1000 — not yet extracted (OQ-8)." }
+    ],
+    "approved_products": [],
+    "applicability": { "age_band": ["elementary"], "ada": true, "user_class": "student" },
+    "obligations": [],
+    "spec_section": "22 1000",
+    "mounting_height_ref": "water_closet_seat",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — WC schedule (WC-1…WC-6)", "doc_version": "250908", "note": "WC-2 elementary ADA." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "WC-3",
+    "kind": "assembly",
+    "family": "WC",
+    "display_name": "Water closet — secondary/adult",
+    "description_short": "Water closet, floor mounted, secondary/adult; flushometer valve, 1.28 gpf max.",
+    "components": [
+      { "kind": "bowl", "note": "Approved bowl products per 22 1000 WC schedule — not yet extracted (OQ-8)." },
+      { "kind": "flush_valve", "ref": "FLV-1", "note": "FLV-1/FLV-1a per sensor/manual split — see OQ-9." },
+      { "kind": "seat", "note": "Seat model per 22 1000 — not yet extracted (OQ-8)." }
+    ],
+    "approved_products": [],
+    "applicability": { "age_band": ["secondary_adult"], "ada": false, "user_class": "staff_adult" },
+    "obligations": [],
+    "spec_section": "22 1000",
+    "mounting_height_ref": "water_closet_seat",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — WC schedule (WC-1…WC-6)", "doc_version": "250908", "note": "WC-3 secondary/adult." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "WC-4",
+    "kind": "assembly",
+    "family": "WC",
+    "display_name": "Water closet — secondary/adult, accessible",
+    "description_short": "Water closet, floor mounted, secondary/adult, accessible; seat height 17–19 in.; flushometer valve, 1.28 gpf max.",
+    "components": [
+      { "kind": "bowl", "note": "Approved bowl products per 22 1000 WC schedule — not yet extracted (OQ-8)." },
+      { "kind": "flush_valve", "ref": "FLV-1", "note": "FLV-1/FLV-1a per sensor/manual split — see OQ-9." },
+      { "kind": "seat", "note": "Seat model per 22 1000 — not yet extracted (OQ-8)." }
+    ],
+    "approved_products": [],
+    "applicability": { "age_band": ["secondary_adult"], "ada": true, "user_class": "staff_adult" },
+    "obligations": [],
+    "spec_section": "22 1000",
+    "mounting_height_ref": "water_closet_seat",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — WC schedule (WC-1…WC-6)", "doc_version": "250908", "note": "WC-4 secondary ADA, seat height 17–19 in." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "WC-5",
+    "kind": "assembly",
+    "family": "WC",
+    "display_name": "Water closet — kindergarten",
+    "description_short": "Water closet, floor mounted, kindergarten; 11–12 in. bowl height; 1¼ in. seat ring; flushometer valve, 1.28 gpf max.",
+    "components": [
+      { "kind": "bowl", "note": "Approved bowl products per 22 1000 WC schedule — not yet extracted (OQ-8)." },
+      { "kind": "flush_valve", "ref": "FLV-1", "note": "FLV-1/FLV-1a per sensor/manual split — see OQ-9." },
+      { "kind": "seat", "note": "1¼ in. seat ring. Kohler U-1 not permitted at kindergarten (see OQ-16 for product clarification)." }
+    ],
+    "approved_products": [],
+    "applicability": { "age_band": ["preK_K"], "user_class": "student" },
+    "obligations": [],
+    "spec_section": "22 1000",
+    "mounting_height_ref": "water_closet_seat",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — WC schedule (WC-1…WC-6)", "doc_version": "250908", "note": "WC-5 kindergarten, 11–12 in. bowl, 1¼ in. seat ring." },
+      { "doc": "contracts/room-type-taxonomy.md", "section": "classroom_kindergarten", "doc_version": "0.2", "note": "WC-5 in attached RR; no Kohler U-1." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "FLV-1",
+    "kind": "assembly",
+    "family": "FLV",
+    "display_name": "Flushometer valve — water closet",
+    "description_short": "Water closet flushometer; battery-powered infrared sensor with manual override (hardwired sensors prohibited).",
+    "components": [],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "SDG", "section": "3.4-A.2/3 (restroom kit)", "doc_version": "02/26/2025", "note": "IR battery flush valves with manual override; no hardwired sensors." },
+      { "doc": "22 1000", "section": "Part 2 — FLV schedule", "doc_version": "250908" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "FLV-1a",
+    "kind": "assembly",
+    "family": "FLV",
+    "display_name": "Flushometer valve — water closet (variant)",
+    "description_short": "Water closet flushometer, FLV-1 variant — distinction to verify.",
+    "components": [],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — FLV schedule", "doc_version": "250908", "note": "FLV-1/FLV-1a pairing per planning record." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-9: verify FLV-1 vs FLV-1a distinction (sensor vs manual?) against 22 1000."
+  },
+  {
+    "id": "FLV-2",
+    "kind": "assembly",
+    "family": "FLV",
+    "display_name": "Flushometer valve — urinal",
+    "description_short": "Urinal flushometer; 0.125 gpf max; battery-powered infrared sensor with manual override (hardwired sensors prohibited).",
+    "components": [],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — flow maxima", "doc_version": "250908", "note": "Urinals 1/8 gpf or non-water (non-water requires District written approval)." },
+      { "doc": "SDG", "section": "3.4-A.2/3 (restroom kit)", "doc_version": "02/26/2025" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "FLV-2a",
+    "kind": "assembly",
+    "family": "FLV",
+    "display_name": "Flushometer valve — urinal (variant)",
+    "description_short": "Urinal flushometer, FLV-2 variant — distinction to verify.",
+    "components": [],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — FLV schedule", "doc_version": "250908", "note": "FLV-2/FLV-2a pairing per planning record." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-9: verify FLV-2 vs FLV-2a distinction against 22 1000."
+  },
+  {
+    "id": "U-3",
+    "kind": "assembly",
+    "family": "U",
+    "display_name": "Urinal — student restroom",
+    "description_short": "Urinal, wall hung, 0.125 gpf max flushometer.",
+    "components": [
+      { "kind": "flush_valve", "ref": "FLV-2", "note": "FLV-2/FLV-2a per sensor/manual split — see OQ-9." }
+    ],
+    "approved_products": [],
+    "applicability": { "user_class": "student", "note": "U-3 vs U-4 distinction (standard vs accessible mounting?) to verify — OQ-6." },
+    "obligations": [],
+    "spec_section": "22 1000",
+    "mounting_height_ref": "urinal_lip",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — U schedule (U-1…U-4)", "doc_version": "250908", "note": "U-3/U-4 in boys student restrooms per planning record." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-6: verify what distinguishes U-3 from U-4 in the 22 1000 U schedule."
+  },
+  {
+    "id": "U-4",
+    "kind": "assembly",
+    "family": "U",
+    "display_name": "Urinal — student restroom (accessible position)",
+    "description_short": "Urinal, wall hung, accessible mounting height, 0.125 gpf max flushometer.",
+    "components": [
+      { "kind": "flush_valve", "ref": "FLV-2", "note": "FLV-2/FLV-2a per sensor/manual split — see OQ-9." }
+    ],
+    "approved_products": [],
+    "applicability": { "user_class": "student", "ada": true, "note": "U-3 vs U-4 distinction to verify — OQ-6." },
+    "obligations": [],
+    "spec_section": "22 1000",
+    "mounting_height_ref": "urinal_lip",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — U schedule (U-1…U-4)", "doc_version": "250908", "note": "U-3/U-4 in boys student restrooms per planning record." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-6: verify what distinguishes U-3 from U-4 in the 22 1000 U schedule."
+  },
+  {
+    "id": "L-1",
+    "kind": "assembly",
+    "family": "L",
+    "display_name": "Lavatory — student",
+    "description_short": "Student lavatory; cast iron, acid-resistant enamel (vitreous china prohibited); 3 holes on 4 in. centerset (single-hole prohibited); push-button metered faucet F-4; 0.5 gpm max.",
+    "components": [
+      { "kind": "faucet", "ref": "F-4" },
+      { "kind": "trap", "ref": "PT-1" },
+      { "kind": "supplies", "note": "Through-wall supplies: IPS brass nipple only — no braided/flex connectors, no copper MIP sweat adapters." },
+      { "kind": "stops", "note": "Loose-key square-shank lock-shield stops; each faucet on its own ¼-turn angle stop." }
+    ],
+    "approved_products": [
+      { "manufacturer": "CECO", "model": "551" },
+      { "manufacturer": "Kohler", "model": "K-2867" },
+      { "manufacturer": "Zurn", "model": "Z5844-CB" }
+    ],
+    "applicability": { "user_class": "student" },
+    "obligations": ["ob.lav.supplies", "ob.lav.header_sizing", "ob.lav.ada_insulation", "ob.lav.backing"],
+    "spec_section": "22 1000",
+    "mounting_height_ref": "lavatory_rim",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — L schedule (L-1)", "doc_version": "250908", "note": "L-1 bowl: cast iron, acid-resistant enamel; vitreous china prohibited; 3 holes 4 in. centerset; CECO 551 / Kohler K-2867 / Zurn Z5844-CB." },
+      { "doc": "22 1000", "section": "Part 2 — flow maxima", "doc_version": "250908", "note": "Lavatories 0.5 gpm maximum." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "L-2",
+    "kind": "assembly",
+    "family": "L",
+    "display_name": "Lavatory — student (variant)",
+    "description_short": "Student lavatory, L-1 variant; push-button metered faucet F-4.",
+    "components": [
+      { "kind": "faucet", "ref": "F-4" },
+      { "kind": "trap", "ref": "PT-1" }
+    ],
+    "approved_products": [],
+    "applicability": { "user_class": "student" },
+    "obligations": ["ob.lav.supplies", "ob.lav.header_sizing", "ob.lav.ada_insulation", "ob.lav.backing"],
+    "spec_section": "22 1000",
+    "mounting_height_ref": "lavatory_rim",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — L schedule (L-2)", "doc_version": "250908", "note": "L-1/L-2 student lavatories with F-4 per planning record." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-8: verify the L-2 vs L-1 distinction and approved products against 22 1000."
+  },
+  {
+    "id": "L-3",
+    "kind": "assembly",
+    "family": "L",
+    "display_name": "Lavatory — staff/adult",
+    "description_short": "Staff/adult lavatory; push-button metered faucet F-5; 0.5 gpm max.",
+    "components": [
+      { "kind": "faucet", "ref": "F-5" },
+      { "kind": "trap", "ref": "PT-1" }
+    ],
+    "approved_products": [],
+    "applicability": { "user_class": "staff_adult" },
+    "obligations": ["ob.lav.supplies", "ob.lav.header_sizing", "ob.lav.backing"],
+    "spec_section": "22 1000",
+    "mounting_height_ref": "lavatory_rim",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — L schedule (L-3)", "doc_version": "250908", "note": "L-3/L-4 staff lavatories with F-5 per planning record." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-8: verify the L-3 definition and approved products against 22 1000."
+  },
+  {
+    "id": "L-4",
+    "kind": "assembly",
+    "family": "L",
+    "display_name": "Lavatory — staff/adult, accessible",
+    "description_short": "Staff/adult lavatory, accessible; push-button metered faucet F-5; insulated exposed piping below; 0.5 gpm max.",
+    "components": [
+      { "kind": "faucet", "ref": "F-5" },
+      { "kind": "trap", "ref": "PT-1" }
+    ],
+    "approved_products": [],
+    "applicability": { "user_class": "staff_adult", "ada": true },
+    "obligations": ["ob.lav.supplies", "ob.lav.header_sizing", "ob.lav.ada_insulation", "ob.lav.backing"],
+    "spec_section": "22 1000",
+    "mounting_height_ref": "lavatory_rim",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — L schedule (L-4)", "doc_version": "250908", "note": "L-3/L-4 staff lavatories with F-5 per planning record." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-8: verify the L-4 definition (accessible variant assumed) and approved products against 22 1000."
+  },
+  {
+    "id": "L-5",
+    "kind": "assembly",
+    "family": "L",
+    "display_name": "Hand sink",
+    "description_short": "Hand sink, stainless steel (Advance TABCO).",
+    "components": [],
+    "approved_products": [{ "manufacturer": "Advance TABCO" }],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "student_store", "doc_version": "0.2", "note": "L-5 hand sink (Advance TABCO)." },
+      { "doc": "22 1000", "section": "Part 2 — L schedule (L-5)", "doc_version": "250908" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "F-4",
+    "kind": "assembly",
+    "family": "F",
+    "display_name": "Faucet — student lavatory",
+    "description_short": "Push-button self-metering lavatory faucet, ADA: runs ≥10 seconds at ≤5 lb activation force.",
+    "components": [],
+    "approved_products": [
+      { "manufacturer": "Chicago", "model": "3400-ABCP" },
+      { "manufacturer": "Zurn" }
+    ],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — F schedule (F-4)", "doc_version": "250908", "note": "Push-button ADA metered, ≥10 sec run, ≤5 lb force; Chicago 3400-ABCP / Zurn." },
+      { "doc": "SDG", "section": "3.4-A.2/3 (restroom kit)", "doc_version": "02/26/2025", "note": "Push-button metered faucets at restrooms." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "F-5",
+    "kind": "assembly",
+    "family": "F",
+    "display_name": "Faucet — staff/adult lavatory",
+    "description_short": "Staff/adult lavatory faucet, metered.",
+    "components": [],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — F schedule (F-5)", "doc_version": "250908", "note": "L-3/L-4 staff lavatories pair with F-5 per planning record." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-8: verify F-5 type and approved products against 22 1000."
+  },
+  {
+    "id": "PT-1",
+    "kind": "assembly",
+    "family": "PT",
+    "display_name": "P-trap — chrome-plated cast brass",
+    "description_short": "Chrome-plated cast-brass adjustable p-trap (tubular traps prohibited).",
+    "components": [],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — PT schedule (PT-1)", "doc_version": "250908", "note": "Chrome cast-brass trap; tubular traps prohibited." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "S-2",
+    "kind": "assembly",
+    "family": "S",
+    "display_name": "Sink — ST-2 assembly component",
+    "description_short": "Sink, component of the ST-2 assembly.",
+    "components": [],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — S/ST schedules", "doc_version": "250908", "note": "ST-2 = S-2 + F-2 + K-8801." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "F-2",
+    "kind": "assembly",
+    "family": "F",
+    "display_name": "Faucet — ST-2 assembly component",
+    "description_short": "Faucet, component of the ST-2 assembly.",
+    "components": [],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — S/ST schedules", "doc_version": "250908", "note": "ST-2 = S-2 + F-2 + K-8801." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ST-2",
+    "kind": "assembly",
+    "family": "ST",
+    "display_name": "Sink assembly — staff/support rooms",
+    "description_short": "Pre-bundled sink assembly: S-2 sink + F-2 faucet + Kohler K-8801 drain. Concessions, faculty lounge, nurse, parent center and similar.",
+    "components": [
+      { "kind": "sink", "ref": "S-2" },
+      { "kind": "faucet", "ref": "F-2" },
+      { "kind": "drain", "note": "Kohler K-8801" }
+    ],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — ST schedule (ST-2)", "doc_version": "250908", "note": "ST-2 = S-2 + F-2 + K-8801 for Concessions, Faculty Lounge, Nurse, Parent Center…" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "ST-3",
+    "kind": "assembly",
+    "family": "ST",
+    "display_name": "Sink assembly — workroom/prep type",
+    "description_short": "Pre-bundled sink assembly (prep/workroom type); composition per 22 1000 ST schedule.",
+    "components": [
+      { "kind": "sink", "note": "Component sink per 22 1000 ST schedule — not yet extracted (OQ-10)." },
+      { "kind": "faucet", "note": "Component faucet per 22 1000 ST schedule — not yet extracted (OQ-10)." }
+    ],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "lactation_station / makerspace / science_prep", "doc_version": "0.2", "note": "ST-3 at lactation stations, makerspaces, prep rooms." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-10: extract ST-3 component composition from the 22 1000 ST schedule."
+  },
+  {
+    "id": "ST-4",
+    "kind": "assembly",
+    "family": "ST",
+    "display_name": "Sink assembly — classroom",
+    "description_short": "Pre-bundled classroom sink assembly (cold water service); composition per 22 1000 ST schedule.",
+    "components": [
+      { "kind": "sink", "note": "Component sink per 22 1000 ST schedule — not yet extracted (OQ-10)." },
+      { "kind": "faucet", "note": "Component faucet per 22 1000 ST schedule — not yet extracted (OQ-10)." }
+    ],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "classroom_general", "doc_version": "0.2", "note": "ST-4 if sink; cold only." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-10: extract ST-4 component composition from the 22 1000 ST schedule."
+  },
+  {
+    "id": "ST-5",
+    "kind": "assembly",
+    "family": "ST",
+    "display_name": "Sink assembly — art classroom (type 5)",
+    "description_short": "Art classroom sink assembly; composition per 22 1000 ST schedule.",
+    "components": [
+      { "kind": "sink", "note": "Component sink per 22 1000 ST schedule — not yet extracted (OQ-10)." },
+      { "kind": "faucet", "note": "Component faucet per 22 1000 ST schedule — not yet extracted (OQ-10)." }
+    ],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "art_classroom", "doc_version": "0.2", "note": "Art classrooms: ST-5/ST-6." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-10: extract ST-5 composition and ST-5 vs ST-6 selection guidance from 22 1000."
+  },
+  {
+    "id": "ST-6",
+    "kind": "assembly",
+    "family": "ST",
+    "display_name": "Sink assembly — art classroom (type 6)",
+    "description_short": "Art classroom sink assembly; composition per 22 1000 ST schedule.",
+    "components": [
+      { "kind": "sink", "note": "Component sink per 22 1000 ST schedule — not yet extracted (OQ-10)." },
+      { "kind": "faucet", "note": "Component faucet per 22 1000 ST schedule — not yet extracted (OQ-10)." }
+    ],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "art_classroom", "doc_version": "0.2", "note": "Art classrooms: ST-5/ST-6." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-10: extract ST-6 composition and ST-5 vs ST-6 selection guidance from 22 1000."
+  },
+  {
+    "id": "SS-1",
+    "kind": "assembly",
+    "family": "SS",
+    "display_name": "Service sink — receiving/storage",
+    "description_short": "Service sink, cast iron (hopper and service sinks are cast iron only).",
+    "components": [],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "custodial_receiving_storage", "doc_version": "0.2", "note": "SS-1 at central custodial receiving/storage." },
+      { "doc": "22 1000", "section": "Part 2 — SS schedule / prohibitions", "doc_version": "250908", "note": "Hopper/service sinks cast iron only." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "SS-2",
+    "kind": "assembly",
+    "family": "SS",
+    "display_name": "Hopper (service) sink — custodial closet",
+    "description_short": "Hopper sink, cast iron (cast iron only), with F-6 service faucet.",
+    "components": [{ "kind": "faucet", "ref": "F-6" }],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "custodial_closet", "doc_version": "0.2", "note": "SS-1/SS-2 hopper sink (cast iron only) + floor drain near it." },
+      { "doc": "22 1000", "section": "Part 2 — SS schedule / prohibitions", "doc_version": "250908", "note": "Hopper/service sinks cast iron only." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "F-6",
+    "kind": "assembly",
+    "family": "F",
+    "display_name": "Faucet — service sink",
+    "description_short": "Service sink faucet (SS-2 hopper sink).",
+    "components": [],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — F schedule (F-6)", "doc_version": "250908", "note": "SS-2 + F-6 pairing per planning record." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-8: verify F-6 type and approved products against 22 1000."
+  },
+  {
+    "id": "DF-12",
+    "kind": "assembly",
+    "family": "DF",
+    "display_name": "Drinking fountain + bottle filler — child height",
+    "description_short": "Combination drinking fountain + bottle filler, child height; brass-free waterways; DFWF-1 future-filter provision in locked panel; cleanout above.",
+    "components": [
+      { "kind": "filter_provision", "ref": "DFWF-1" },
+      { "kind": "bottle_filler", "note": "Integral bottle filler head." }
+    ],
+    "approved_products": [],
+    "obligations": ["ob.df.brass_free", "ob.df.filter_provision", "ob.df.alcove"],
+    "spec_section": "22 1000",
+    "mounting_height_ref": "df_bubbler",
+    "citations": [
+      { "doc": "SDG", "section": "2.1-K (drinking fountains / bottle fillers)", "doc_version": "02/26/2025", "note": "Mandatory combination fountain + bottle filler locations; brass-free waterways; future filter provision." },
+      { "doc": "22 1000", "section": "Part 2 — DF schedule (DF-12/DF-12A)", "doc_version": "250908" }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-5: verify DF-12 (child height) vs DF-12A (dual height) selection mapping against 22 1000 commentary."
+  },
+  {
+    "id": "DF-12A",
+    "kind": "assembly",
+    "family": "DF",
+    "display_name": "Drinking fountain + bottle filler — dual height",
+    "description_short": "Combination drinking fountain + bottle filler, dual height; brass-free waterways; DFWF-1 future-filter provision in locked panel; cleanout above.",
+    "components": [
+      { "kind": "filter_provision", "ref": "DFWF-1" },
+      { "kind": "bottle_filler", "note": "Integral bottle filler head." }
+    ],
+    "approved_products": [],
+    "obligations": ["ob.df.brass_free", "ob.df.filter_provision", "ob.df.alcove"],
+    "spec_section": "22 1000",
+    "mounting_height_ref": "df_bubbler",
+    "citations": [
+      { "doc": "SDG", "section": "2.1-K (drinking fountains / bottle fillers)", "doc_version": "02/26/2025" },
+      { "doc": "22 1000", "section": "Part 2 — DF schedule (DF-12/DF-12A)", "doc_version": "250908", "note": "Exterior units: vandal-resistant; sun-exposed stainless gets solar-reflective powder coat." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-5: verify DF-12 vs DF-12A selection mapping against 22 1000 commentary."
+  },
+  {
+    "id": "DFWF-1",
+    "kind": "assembly",
+    "family": "DFWF",
+    "display_name": "Fountain filter head assembly",
+    "description_short": "Drinking fountain/bottle filler future filter provision: filter head + bypass in a locked panel.",
+    "components": [],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — DFWF schedule (DFWF-1)", "doc_version": "250908", "note": "Filter head + bypass in locked panel; future filter provision at all DF/BF." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "EEW-1",
+    "kind": "assembly",
+    "family": "EEW",
+    "display_name": "Emergency shower/eyewash — combination unit",
+    "description_short": "Combination emergency shower and eyewash; tepid water (60–100°F), potable connection.",
+    "components": [],
+    "approved_products": [],
+    "obligations": ["ob.eew.tepid"],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "Title 8 CCR / ANSI Z358.1", "section": "5162", "doc_version": "unversioned", "note": "Emergency shower/eyewash requirement; tepid water." },
+      { "doc": "SDG", "section": "3.4-E.6", "doc_version": "02/26/2025", "note": "Central custodial supplies storage requires emergency shower/eyewash; wording distinguishes school levels." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-4: verify the exact EEW designation for an elementary receiving/storage room (EEW-1 assumed conservatively)."
+  },
+  {
+    "id": "FD-1",
+    "kind": "assembly",
+    "family": "FD",
+    "display_name": "Floor drain — interior, with trap primer",
+    "description_short": "Floor drain with trap primer connection.",
+    "components": [],
+    "approved_products": [],
+    "obligations": ["ob.fd.trap_primer"],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "SDG", "section": "3.4-B.7 (floor drains)", "doc_version": "02/26/2025", "note": "Floor drains with trap primers at restrooms, custodial closets (at hopper), mechanical rooms…" },
+      { "doc": "22 1000", "section": "Part 2 — FD schedule", "doc_version": "250908" }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-11: verify which FD designation (FD-1 vs FD-2 …) applies at restrooms / custodial / mechanical rooms."
+  },
+  {
+    "id": "FD-4",
+    "kind": "assembly",
+    "family": "FD",
+    "display_name": "Floor drain — lunch shelter pavilion",
+    "description_short": "Pavilion floor drain, cast iron with basket strainer; no trap primer (daily washdown keeps traps charged).",
+    "components": [],
+    "approved_products": [],
+    "obligations": ["ob.lunch.drain_note"],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "contracts/room-type-taxonomy.md", "section": "lunch_shelter", "doc_version": "0.2", "note": "Cast-iron pavilion drains (FD-4, no primer — daily washdown)." },
+      { "doc": "SDG", "section": "3.4-B.7 (floor drains)", "doc_version": "02/26/2025", "note": "Lunch shelters: cast iron with basket, no primer." }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "FS-1",
+    "kind": "assembly",
+    "family": "FS",
+    "display_name": "Floor sink",
+    "description_short": "Floor sink (mechanical rooms, serving areas, equipment drains).",
+    "components": [],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "SDG", "section": "3.4-B (floor sinks)", "doc_version": "02/26/2025", "note": "Floor sinks at boiler/mechanical rooms, kitchens, water-heater drip pans…" },
+      { "doc": "22 1000", "section": "Part 2 — FS schedule", "doc_version": "250908" }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-11: verify which FS designation applies at mechanical rooms vs serving kitchens."
+  },
+  {
+    "id": "HB-8",
+    "kind": "assembly",
+    "family": "HB",
+    "display_name": "Hose bibb — student restroom",
+    "description_short": "Hose bibb in recessed locked box with locking cover (student restrooms with floor drains).",
+    "components": [],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "SDG", "section": "3.4-A.2/3 (restroom kit) & 3.4-E.4 (hose bibbs)", "doc_version": "02/26/2025", "note": "Hose bibb in recessed locked box at student restrooms (where floor drain present; locking cover)." },
+      { "doc": "22 1000", "section": "Part 2 — HB schedule (HB-8)", "doc_version": "250908" }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "HB-1",
+    "kind": "assembly",
+    "family": "HB",
+    "display_name": "Hose bibb — exterior wall (type 1)",
+    "description_short": "Exterior hose bibb, ¾ in.; HB-1 vs HB-2 follows wall construction (stucco vs CMU).",
+    "components": [],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — HB schedule", "doc_version": "250908", "note": "Wall construction (stucco vs CMU) changes HB-1 vs HB-2." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-13: verify which of HB-1/HB-2 maps to stucco vs CMU construction."
+  },
+  {
+    "id": "HB-2",
+    "kind": "assembly",
+    "family": "HB",
+    "display_name": "Hose bibb — exterior wall (type 2)",
+    "description_short": "Exterior hose bibb, ¾ in.; HB-1 vs HB-2 follows wall construction (stucco vs CMU).",
+    "components": [],
+    "approved_products": [],
+    "obligations": [],
+    "spec_section": "22 1000",
+    "citations": [
+      { "doc": "22 1000", "section": "Part 2 — HB schedule", "doc_version": "250908", "note": "Wall construction (stucco vs CMU) changes HB-1 vs HB-2." }
+    ],
+    "verification_status": "draft",
+    "todo": "OQ-13: verify which of HB-1/HB-2 maps to stucco vs CMU construction."
+  }
+]
