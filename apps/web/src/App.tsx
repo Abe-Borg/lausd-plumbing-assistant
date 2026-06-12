@@ -4,10 +4,11 @@
 
 import { useRef } from 'react';
 import type { DecisionStore } from '@lausd-pa/engine';
-import { PROJECT_ID } from './data.ts';
+import { PROJECT_ID, roomProgramV2 } from './data.ts';
 import { downloadJson, useAppState, useEngine, type View } from './state.ts';
 import { ArtifactsView } from './components/ArtifactsView.tsx';
 import { Dashboard } from './components/Dashboard.tsx';
+import { DeltaScreen } from './components/DeltaScreen.tsx';
 import { LoadScreen } from './components/LoadScreen.tsx';
 import { QueueView } from './components/QueueView.tsx';
 import { RoomDetail } from './components/RoomDetail.tsx';
@@ -17,6 +18,18 @@ export function App() {
   const [state, dispatch] = useAppState();
   const engine = useEngine(state);
   const storeFileInput = useRef<HTMLInputElement>(null);
+  const programFileInput = useRef<HTMLInputElement>(null);
+
+  const stageProgramFile = (file: File) => {
+    file.text().then((text) => {
+      try {
+        const parsed: unknown = JSON.parse(text);
+        dispatch({ type: 'stage_import', pending: { label: file.name, roomProgram: parsed } });
+      } catch {
+        alert('Not a valid room_program JSON file.');
+      }
+    });
+  };
 
   if (state.phase !== 'workspace') {
     const resuming = Object.keys(state.store.decisions).length > 0;
@@ -79,6 +92,19 @@ export function App() {
             <div className="menu-pop">
               <button
                 onClick={() =>
+                  dispatch({
+                    type: 'stage_import',
+                    pending: { label: 'room_program.v2.json (DD revision)', roomProgram: roomProgramV2 },
+                  })
+                }
+              >
+                Import DD revision (room_program.v2.json)
+              </button>
+              <button onClick={() => programFileInput.current?.click()}>
+                Import room program from file…
+              </button>
+              <button
+                onClick={() =>
                   downloadJson(`decisions-${PROJECT_ID}.json`, state.store)
                 }
               >
@@ -107,6 +133,17 @@ export function App() {
               e.target.value = '';
             }}
           />
+          <input
+            ref={programFileInput}
+            type="file"
+            accept="application/json"
+            hidden
+            onChange={(e) => {
+              const f = e.target.files?.[0];
+              if (f) stageProgramFile(f);
+              e.target.value = '';
+            }}
+          />
         </div>
       </header>
 
@@ -132,6 +169,16 @@ export function App() {
         )}
         {state.view === 'artifacts' && <ArtifactsView result={result} artifacts={artifacts} />}
       </main>
+
+      {state.pendingImport && engine.pending && (
+        <DeltaScreen
+          label={state.pendingImport.label}
+          delta={engine.pending.delta}
+          nextResolved={engine.pending.result}
+          onApply={() => dispatch({ type: 'apply_import', nextResolved: engine.pending!.result })}
+          onCancel={() => dispatch({ type: 'cancel_import' })}
+        />
+      )}
 
       {state.selectedRoomId && (
         <RoomDetail
