@@ -3977,6 +3977,678 @@
               "doc_version": "0.2"
             }
           ]
+        },
+        {
+          "value": "mechanical_room",
+          "label": "Mechanical equipment room",
+          "consequence_summary": "water: —; fires: floor drain, floor sink",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "mechanical_room",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "science_prep",
+          "label": "Science prep/workroom",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "science_prep",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "restroom_single_user",
+          "label": "Single-user restroom",
+          "consequence_summary": "water: HC; fires: water closet, lavatory, floor drain",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "restroom_single_user",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "boiler_room",
+          "label": "Boiler room",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "boiler_room",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "custodial_closet",
+          "label": "Custodial closet",
+          "consequence_summary": "water: HC; fires: hopper (service) sink, floor drain at hopper",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "custodial_closet",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "drying_room",
+          "label": "Drying room (adjacent showers)",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "drying_room",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "laundry_room",
+          "label": "Laundry room",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "laundry_room",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "nurse_office",
+          "label": "Nurse office / first aid",
+          "consequence_summary": "water: HC; fires: sink assembly",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "nurse_office",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "photo_negative_room",
+          "label": "Photo negative/film processing",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "photo_negative_room",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "athletic_field_sanitary",
+          "label": "Field sanitary unit",
+          "consequence_summary": "water: T; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "athletic_field_sanitary",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "electrical_room",
+          "label": "Electrical room",
+          "consequence_summary": "water: —; fires: floor drain (below grade only)",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "electrical_room",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "shower_locker_student",
+          "label": "Student shower/locker room",
+          "consequence_summary": "water: T; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "shower_locker_student",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "multipurpose_room",
+          "label": "Multipurpose room",
+          "consequence_summary": "water: —; fires site/building fountain rules",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "multipurpose_room",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "ceramics_classroom",
+          "label": "Ceramics classroom",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "ceramics_classroom",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "pool_equipment_room",
+          "label": "Pool equipment/chlorination room",
+          "consequence_summary": "water: TP; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "pool_equipment_room",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "art_classroom",
+          "label": "Art classroom",
+          "consequence_summary": "water: HC; fires: art classroom sink",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "art_classroom",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "classroom_eec",
+          "label": "Early Education Center classroom",
+          "consequence_summary": "water: T; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "classroom_eec",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "classroom_special_ed",
+          "label": "Special education classroom",
+          "consequence_summary": "water: C; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "classroom_special_ed",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "child_development",
+          "label": "Child development room",
+          "consequence_summary": "water: C; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "child_development",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "library_workroom",
+          "label": "Library workroom",
+          "consequence_summary": "water: HC; fires: sink assembly",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "library_workroom",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "sports_medicine",
+          "label": "Sports medicine classroom",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "sports_medicine",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "science_lab_flex",
+          "label": "Flexible science classroom",
+          "consequence_summary": "water: M; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "science_lab_flex",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "patient_care_classroom",
+          "label": "Patient care classroom",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "patient_care_classroom",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "culinary_arts",
+          "label": "Culinary arts classroom",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "culinary_arts",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "graphics_design",
+          "label": "Graphics design classroom",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "graphics_design",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "lunch_shelter",
+          "label": "Lunch shelter / outdoor eating",
+          "consequence_summary": "water: —; fires: pavilion floor drains, hose bibbs",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "lunch_shelter",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "wood_shop",
+          "label": "Wood shop",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "wood_shop",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "parking_garage_subterranean",
+          "label": "Subterranean parking",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "parking_garage_subterranean",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "kitchen_serving",
+          "label": "Serving/warming kitchen (no cooking)",
+          "consequence_summary": "water: HC; fires: hand sink, floor sink",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "kitchen_serving",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "robotics_lab",
+          "label": "Robotics lab",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "robotics_lab",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "shower_staff",
+          "label": "Staff/special-ed shower",
+          "consequence_summary": "water: HC/T; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "shower_staff",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "teachers_lounge",
+          "label": "Faculty lounge",
+          "consequence_summary": "water: HC; fires: sink assembly",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "teachers_lounge",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "student_store",
+          "label": "Student store",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "student_store",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "custodial_receiving_storage",
+          "label": "Central custodial receiving/storage",
+          "consequence_summary": "water: HC; fires: service sink, emergency shower/eyewash",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "custodial_receiving_storage",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "concessions",
+          "label": "Concessions stand",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "concessions",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "gymnasium",
+          "label": "Gymnasium",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "gymnasium",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "admin_office",
+          "label": "Administration area",
+          "consequence_summary": "water: —; no plumbing requirements",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "admin_office",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "kitchen",
+          "label": "Kitchen (food service)",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "kitchen",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "play_yard",
+          "label": "Play yard / exterior play area",
+          "consequence_summary": "water: —; fires site/building fountain rules",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "play_yard",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "auto_shop",
+          "label": "Auto shop",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "auto_shop",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "science_lab",
+          "label": "Science lab (MS/HS)",
+          "consequence_summary": "water: M; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "science_lab",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "auditorium",
+          "label": "Auditorium",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "auditorium",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "homemaking",
+          "label": "Homemaking",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "homemaking",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "parent_center",
+          "label": "Parent center",
+          "consequence_summary": "water: HC; fires: sink assembly",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "parent_center",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "science_lab_6th",
+          "label": "6th-grade science / flex science",
+          "consequence_summary": "water: M; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "science_lab_6th",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "cafeteria_dining",
+          "label": "Cafeteria / dining",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "cafeteria_dining",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "library",
+          "label": "Library / media center",
+          "consequence_summary": "water: —; no plumbing requirements",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "library",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "trash_area_uncovered",
+          "label": "Uncovered trash area",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "trash_area_uncovered",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "corridor_walkway",
+          "label": "Corridor / exterior walkway",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "corridor_walkway",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "cad_drafting_lab",
+          "label": "CAD/drafting lab",
+          "consequence_summary": "water: C; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "cad_drafting_lab",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "digital_imaging",
+          "label": "Digital imaging",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "digital_imaging",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "forensic_lab",
+          "label": "Forensic lab",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "forensic_lab",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "lath_house",
+          "label": "Lath house",
+          "consequence_summary": "water: C; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "lath_house",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "makerspace",
+          "label": "Makerspace",
+          "consequence_summary": "water: HC; fires: sink assembly",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "makerspace",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "photography_lab",
+          "label": "Photography lab",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "photography_lab",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "plant_manager_office",
+          "label": "Plant manager office",
+          "consequence_summary": "water: —; no plumbing requirements",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "plant_manager_office",
+              "doc_version": "0.2"
+            }
+          ]
         }
       ],
       "citations": [
@@ -4089,6 +4761,678 @@
             {
               "doc": "contracts/room-type-taxonomy.md",
               "section": "instrumental_music",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "photo_negative_room",
+          "label": "Photo negative/film processing",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "photo_negative_room",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "science_prep",
+          "label": "Science prep/workroom",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "science_prep",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "boiler_room",
+          "label": "Boiler room",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "boiler_room",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "custodial_closet",
+          "label": "Custodial closet",
+          "consequence_summary": "water: HC; fires: hopper (service) sink, floor drain at hopper",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "custodial_closet",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "drying_room",
+          "label": "Drying room (adjacent showers)",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "drying_room",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "laundry_room",
+          "label": "Laundry room",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "laundry_room",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "nurse_office",
+          "label": "Nurse office / first aid",
+          "consequence_summary": "water: HC; fires: sink assembly",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "nurse_office",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "restroom_staff",
+          "label": "Staff/faculty/adult restroom",
+          "consequence_summary": "water: HC; fires: water closet, lavatory, floor drain",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "restroom_staff",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "electrical_room",
+          "label": "Electrical room",
+          "consequence_summary": "water: —; fires: floor drain (below grade only)",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "electrical_room",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "patient_care_classroom",
+          "label": "Patient care classroom",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "patient_care_classroom",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "restroom_student",
+          "label": "Student restroom",
+          "consequence_summary": "water: T; fires: water closets, water closet, urinals, lavatories, lavatory, floor drains, hose bibb",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "restroom_student",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "sports_medicine",
+          "label": "Sports medicine classroom",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "sports_medicine",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "athletic_field_sanitary",
+          "label": "Field sanitary unit",
+          "consequence_summary": "water: T; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "athletic_field_sanitary",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "pool_equipment_room",
+          "label": "Pool equipment/chlorination room",
+          "consequence_summary": "water: TP; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "pool_equipment_room",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "art_classroom",
+          "label": "Art classroom",
+          "consequence_summary": "water: HC; fires: art classroom sink",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "art_classroom",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "classroom_eec",
+          "label": "Early Education Center classroom",
+          "consequence_summary": "water: T; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "classroom_eec",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "classroom_general",
+          "label": "General classroom",
+          "consequence_summary": "water: C; fires: classroom sink",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "classroom_general",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "child_development",
+          "label": "Child development room",
+          "consequence_summary": "water: C; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "child_development",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "culinary_arts",
+          "label": "Culinary arts classroom",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "culinary_arts",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "library_workroom",
+          "label": "Library workroom",
+          "consequence_summary": "water: HC; fires: sink assembly",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "library_workroom",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "science_lab_flex",
+          "label": "Flexible science classroom",
+          "consequence_summary": "water: M; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "science_lab_flex",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "shower_locker_student",
+          "label": "Student shower/locker room",
+          "consequence_summary": "water: T; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "shower_locker_student",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "ceramics_classroom",
+          "label": "Ceramics classroom",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "ceramics_classroom",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "classroom_special_ed",
+          "label": "Special education classroom",
+          "consequence_summary": "water: C; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "classroom_special_ed",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "lath_house",
+          "label": "Lath house",
+          "consequence_summary": "water: C; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "lath_house",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "robotics_lab",
+          "label": "Robotics lab",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "robotics_lab",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "teachers_lounge",
+          "label": "Faculty lounge",
+          "consequence_summary": "water: HC; fires: sink assembly",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "teachers_lounge",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "graphics_design",
+          "label": "Graphics design classroom",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "graphics_design",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "kitchen",
+          "label": "Kitchen (food service)",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "kitchen",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "makerspace",
+          "label": "Makerspace",
+          "consequence_summary": "water: HC; fires: sink assembly",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "makerspace",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "admin_office",
+          "label": "Administration area",
+          "consequence_summary": "water: —; no plumbing requirements",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "admin_office",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "custodial_receiving_storage",
+          "label": "Central custodial receiving/storage",
+          "consequence_summary": "water: HC; fires: service sink, emergency shower/eyewash",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "custodial_receiving_storage",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "lunch_shelter",
+          "label": "Lunch shelter / outdoor eating",
+          "consequence_summary": "water: —; fires: pavilion floor drains, hose bibbs",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "lunch_shelter",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "homemaking",
+          "label": "Homemaking",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "homemaking",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "science_lab",
+          "label": "Science lab (MS/HS)",
+          "consequence_summary": "water: M; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "science_lab",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "shower_staff",
+          "label": "Staff/special-ed shower",
+          "consequence_summary": "water: HC/T; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "shower_staff",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "parking_garage_subterranean",
+          "label": "Subterranean parking",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "parking_garage_subterranean",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "plant_manager_office",
+          "label": "Plant manager office",
+          "consequence_summary": "water: —; no plumbing requirements",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "plant_manager_office",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "gymnasium",
+          "label": "Gymnasium",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "gymnasium",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "kitchen_serving",
+          "label": "Serving/warming kitchen (no cooking)",
+          "consequence_summary": "water: HC; fires: hand sink, floor sink",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "kitchen_serving",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "wood_shop",
+          "label": "Wood shop",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "wood_shop",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "auditorium",
+          "label": "Auditorium",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "auditorium",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "cafeteria_dining",
+          "label": "Cafeteria / dining",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "cafeteria_dining",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "play_yard",
+          "label": "Play yard / exterior play area",
+          "consequence_summary": "water: —; fires site/building fountain rules",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "play_yard",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "student_store",
+          "label": "Student store",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "student_store",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "science_lab_6th",
+          "label": "6th-grade science / flex science",
+          "consequence_summary": "water: M; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "science_lab_6th",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "trash_area_uncovered",
+          "label": "Uncovered trash area",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "trash_area_uncovered",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "cad_drafting_lab",
+          "label": "CAD/drafting lab",
+          "consequence_summary": "water: C; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "cad_drafting_lab",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "library",
+          "label": "Library / media center",
+          "consequence_summary": "water: —; no plumbing requirements",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "library",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "auto_shop",
+          "label": "Auto shop",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "auto_shop",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "concessions",
+          "label": "Concessions stand",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "concessions",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "corridor_walkway",
+          "label": "Corridor / exterior walkway",
+          "consequence_summary": "water: —; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "corridor_walkway",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "digital_imaging",
+          "label": "Digital imaging",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "digital_imaging",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "forensic_lab",
+          "label": "Forensic lab",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "forensic_lab",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "parent_center",
+          "label": "Parent center",
+          "consequence_summary": "water: HC; fires: sink assembly",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "parent_center",
+              "doc_version": "0.2"
+            }
+          ]
+        },
+        {
+          "value": "photography_lab",
+          "label": "Photography lab",
+          "consequence_summary": "water: HC; recognized, but outside the MVP rule slice",
+          "citations": [
+            {
+              "doc": "contracts/room-type-taxonomy.md",
+              "section": "photography_lab",
               "doc_version": "0.2"
             }
           ]

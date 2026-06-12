@@ -732,13 +732,15 @@ function member(norm: NormalizedRoom): CardMember {
 }
 
 function classifyOptions(ctx: Ctx, room: RoomRecord): CardOption[] {
+  // Full taxonomy list, fuzzy-ordered by similarity to the drawn name (§6.3);
+  // the UI progressively discloses beyond the top matches.
   const ranked = rankCandidates(room.name_as_drawn, ctx.kb.taxonomy);
   const current =
     room.room_type_code && taxonomyByCode(ctx.kb, room.room_type_code)
       ? room.room_type_code
       : null;
-  const top = ranked.slice(0, 8).map((r) => r.code);
-  const codes = current && !top.includes(current) ? [current, ...top] : top;
+  const all = ranked.map((r) => r.code);
+  const codes = current ? [current, ...all.filter((c) => c !== current)] : all;
   return codes.map((code) => {
     const tax = taxonomyByCode(ctx.kb, code) as TaxonomyEntry;
     const profile = profileByCode(ctx.kb, code);

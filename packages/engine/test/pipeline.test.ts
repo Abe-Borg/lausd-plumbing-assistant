@@ -70,12 +70,11 @@ describe('Act 1 — load v1 with an empty store', () => {
     expect(wcField.suggestion_basis).toContain('DRAFT CPC values');
   });
 
-  it('classify card for STEAM ROOM has fuzzy-ranked options and no guess', () => {
+  it('classify card for STEAM ROOM offers the full fuzzy-ranked taxonomy and no guess', () => {
     const card = result.cards.find((c) => c.card_id === 'card:room:rm-b115/classify')!;
     expect(card.default_suggestion).toBeUndefined();
-    expect(card.options!.length).toBeGreaterThanOrEqual(8);
-    expect(card.options!.some((o) => o.value === 'makerspace')).toBe(false ||
-      card.options!.some((o) => o.value === 'makerspace'));
+    expect(card.options!.length).toBe(kb.taxonomy.length); // full list, §6.3
+    expect(card.options!.some((o) => o.value === 'makerspace')).toBe(true);
     expect(dp(result, 'room:rm-b115/classify').status).toBe('queued');
   });
 
