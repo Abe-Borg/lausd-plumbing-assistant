@@ -15,6 +15,7 @@
     "lint": "eslint .",
     "dev": "npm --workspace apps/web run dev",
     "build": "npm --workspace apps/web run build",
+    "build:singlefile": "npm --workspace apps/web run build:singlefile",
     "preview": "npm --workspace apps/web run preview"
   },
   "devDependencies": {
