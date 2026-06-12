@@ -1,0 +1,45 @@
+Designation,Description,Spec Section,Approved Manufacturers,Mounting Height (in. AFF),Count,Locations,Status
+WC-1,"Water closet, floor mounted, elementary students; flushometer valve, 1.28 gpf max.",22 1000,Per 22 1000 (not yet extracted),15 (elem),9,"A110, A111, A210, A211, B109, B110",
+WC-2,"Water closet, floor mounted, elementary students, accessible; flushometer valve, 1.28 gpf max.",22 1000,Per 22 1000 (not yet extracted),per 22 1000 2.46 (elem — OQ-14),6,"A110, A111, A210, A211, B109, B110",
+WC-3,"Water closet, floor mounted, secondary/adult; flushometer valve, 1.28 gpf max.",22 1000,Per 22 1000 (not yet extracted),15–17 (adult),1,A212,
+WC-4,"Water closet, floor mounted, secondary/adult, accessible; seat height 17–19 in.; flushometer valve, 1.28 gpf max.",22 1000,Per 22 1000 (not yet extracted),17–19 (adult),2,"A112, B111",
+WC-5,"Water closet, floor mounted, kindergarten; 11–12 in. bowl height; 1¼ in. seat ring; flushometer valve, 1.28 gpf max.",22 1000,Per 22 1000 (not yet extracted),11–12 (preK-K),2,"A105A, A106A",
+FLV-1,Water closet flushometer; battery-powered infrared sensor with manual override (hardwired sensors prohibited).,22 1000,Per 22 1000 (not yet extracted),,20,"A105A, A106A, A110–A112, A210–A212, B109–B111",
+FLV-2,Urinal flushometer; 0.125 gpf max; battery-powered infrared sensor with manual override (hardwired sensors prohibited).,22 1000,Per 22 1000 (not yet extracted),,6,"A110, A210, B109",
+U-3,"Urinal, wall hung, 0.125 gpf max flushometer.",22 1000,Per 22 1000 (not yet extracted),18 (elem),3,"A110, A210, B109",DRAFT — verification pending
+U-4,"Urinal, wall hung, accessible mounting height, 0.125 gpf max flushometer.",22 1000,Per 22 1000 (not yet extracted),15 (elem),3,"A110, A210, B109",DRAFT — verification pending
+L-1,"Student lavatory; cast iron, acid-resistant enamel (vitreous china prohibited); 3 holes on 4 in. centerset (single-hole prohibited); push-button metered faucet F-4; 0.5 gpm max.",22 1000,CECO 551 / Kohler K-2867 / Zurn Z5844-CB,25 (preK-K); 30 (elem),8,"A105A, A106A, A110, A111, A210, A211, B109, B110",
+L-2,"Student lavatory, L-1 variant; push-button metered faucet F-4.",22 1000,Per 22 1000 (not yet extracted),30 (elem),6,"A110, A111, A210, A211, B109, B110",DRAFT — verification pending
+L-3,Staff/adult lavatory; push-button metered faucet F-5; 0.5 gpm max.,22 1000,Per 22 1000 (not yet extracted),32 (adult),1,A212,DRAFT — verification pending
+L-4,"Staff/adult lavatory, accessible; push-button metered faucet F-5; insulated exposed piping below; 0.5 gpm max.",22 1000,Per 22 1000 (not yet extracted),34 max (adult),2,"A112, B111",DRAFT — verification pending
+L-5,"Hand sink, stainless steel (Advance TABCO).",22 1000,Advance TABCO,,1,B108,
+F-2,"Faucet, component of the ST-2 assembly.",22 1000,Per 22 1000 (not yet extracted),,5,"A107, B102–B104, B106",
+F-4,"Push-button self-metering lavatory faucet, ADA: runs ≥10 seconds at ≤5 lb activation force.",22 1000,Chicago 3400-ABCP / Zurn,,14,"A105A, A106A, A110, A111, A210, A211, B109, B110",
+F-5,"Staff/adult lavatory faucet, metered.",22 1000,Per 22 1000 (not yet extracted),,3,"A112, A212, B111",DRAFT — verification pending
+F-6,Service sink faucet (SS-2 hopper sink).,22 1000,Per 22 1000 (not yet extracted),,3,"A113, A213, B112",DRAFT — verification pending
+PT-1,Chrome-plated cast-brass adjustable p-trap (tubular traps prohibited).,22 1000,Per 22 1000 (not yet extracted),,17,"A105A, A106A, A110–A112, A210–A212, B109–B111",
+ST-2,"Pre-bundled sink assembly: S-2 sink + F-2 faucet + Kohler K-8801 drain. Concessions, faculty lounge, nurse, parent center and similar.",22 1000,Per 22 1000 (not yet extracted),,5,"A107, B102–B104, B106",
+ST-3,Pre-bundled sink assembly (prep/workroom type); composition per 22 1000 ST schedule.,22 1000,Per 22 1000 (not yet extracted),,1,B115,DRAFT — verification pending
+ST-4,Pre-bundled classroom sink assembly (cold water service); composition per 22 1000 ST schedule.,22 1000,Per 22 1000 (not yet extracted),,12,"A101–A106, A201–A206",DRAFT — verification pending
+S-2,"Sink, component of the ST-2 assembly.",22 1000,Per 22 1000 (not yet extracted),,5,"A107, B102–B104, B106",
+SS-1,"Service sink, cast iron (hopper and service sinks are cast iron only).",22 1000,Per 22 1000 (not yet extracted),,1,B113,
+SS-2,"Hopper sink, cast iron (cast iron only), with F-6 service faucet.",22 1000,Per 22 1000 (not yet extracted),,3,"A113, A213, B112",
+DF-12,"Combination drinking fountain + bottle filler, child height; brass-free waterways; DFWF-1 future-filter provision in locked panel; cleanout above.",22 1000,Per 22 1000 (not yet extracted),,3,"A110/A111 entry, A210/A211 entry, B109/B110 entry",DRAFT — verification pending
+DF-12A,"Combination drinking fountain + bottle filler, dual height; brass-free waterways; DFWF-1 future-filter provision in locked panel; cleanout above.",22 1000,Per 22 1000 (not yet extracted),,4,"LUNCH SHELTER (S001), MULTI-USE ROOM (B116) lobby, MULTIPURPOSE / DINING (B107) lobby, PLAY YARD - DF STATION (S002)",DRAFT — verification pending
+DFWF-1,Drinking fountain/bottle filler future filter provision: filter head + bypass in a locked panel.,22 1000,Per 22 1000 (not yet extracted),,7,"A110/A111 entry, A210/A211 entry, B109/B110 entry, LUNCH SHELTER (S001), MULTI-USE ROOM (B116) lobby, MULTIPURPOSE / DINING (B107) lobby, PLAY YARD - DF STATION (S002)",
+EEW-1,"Combination emergency shower and eyewash; tepid water (60–100°F), potable connection.",22 1000,Per 22 1000 (not yet extracted),,1,B113,DRAFT — verification pending
+FD-1,Floor drain with trap primer connection.,22 1000,Per 22 1000 (not yet extracted),,18,"A105A, A106A, A110–A113, A115, A210–A213, B109–B112",DRAFT — verification pending
+FD-4,"Pavilion floor drain, cast iron with basket strainer; no trap primer (daily washdown keeps traps charged).",22 1000,Per 22 1000 (not yet extracted),,2,S001,
+FS-1,"Floor sink (mechanical rooms, serving areas, equipment drains).",22 1000,Per 22 1000 (not yet extracted),,2,"A115, B108",DRAFT — verification pending
+HB-1,"Exterior hose bibb, ¾ in.; HB-1 vs HB-2 follows wall construction (stucco vs CMU).",22 1000,Per 22 1000 (not yet extracted),,2,S001,DRAFT — verification pending
+HB-8,Hose bibb in recessed locked box with locking cover (student restrooms with floor drains).,22 1000,Per 22 1000 (not yet extracted),,6,"A110, A111, A210, A211, B109, B110",
+
+SCHEDULE NOTES
+"Full-size cleanout above every urinal, lavatory, drinking fountain, bottle filler and sink; at lavatories ≤6 in. above the backsplash, aligned to the fixture centerline (offset where a mirror occurs).",SDG 3.4 (cleanouts) (02/26/2025); 22 1000 Part 3 (cleanout execution) (250908)
+Water hammer arrestor (WHA-1) on the fixture header; air chambers are not approved.,22 1000 Part 2 — WHA schedule (WHA-1) (250908)
+Battery-powered infrared flush valves with manual override; hardwired flush sensors are not permitted.,SDG 3.4-A.2/3 (restroom kit) (02/26/2025)
+Push-button self-metering lavatory faucets; ADA operation ≥10 seconds at ≤5 lb force.,SDG 3.4-A.2/3 (restroom kit) (02/26/2025); 22 1000 Part 2 — F schedule (F-4) (250908)
+Provide future filter provision at every drinking fountain / bottle filler: DFWF-1 filter head + bypass in a locked panel.,SDG 2.1-K (02/26/2025)
+Insulate exposed piping under accessible lavatories (Plumberex / Lav-Guard type).,22 1000 Part 2 — L schedule commentary (250908)
+Trap primer at each interior floor drain.,SDG 3.4-B.7 (floor drains) (02/26/2025)
+"Lunch-shelter pavilion drains: cast iron with basket strainer, no trap primer — daily washdown keeps traps charged.",SDG 3.4-B.7 (floor drains) (02/26/2025)

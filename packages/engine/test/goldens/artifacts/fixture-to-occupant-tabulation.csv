@@ -1,0 +1,61 @@
+FIXTURE-TO-OCCUPANT TABULATION (SDG 2.1-J.1.h)
+DRAFT — required minimums use placeholder CPC ratio values pending verification against the current CPC edition (OQ-1). Do not submit.
+Occupancy basis:,"350 students (175/175 at 50/50 — DRAFT split, OQ-2) + 26 staff (2 per classroom, SDG 2.1-J)"
+
+CAMPUS
+Fixture class,Occupancy basis,Required,Ratio,Provided,Status,Notes
+Water closets — male (Students),"175 boys (50/50 of 350 planned capacity, DRAFT split)",6 (DRAFT),1:30 → 6,6,✓,
+Water closets — female (Students),"175 girls (50/50 of 350 planned capacity, DRAFT split)",7 (DRAFT),1:25 → 7,9,✓,
+Water closets (Students),classroom-attached single restrooms (either sex),—,,2,✓,unisex — available to either sex
+Urinals — male (Students),"175 boys (50/50 of 350 planned capacity, DRAFT split)",3 (DRAFT),1:75 → 3,6,✓,
+Lavatories — male (Students),"175 boys (50/50 of 350 planned capacity, DRAFT split)",5 (DRAFT),1:35 → 5,6,✓,
+Lavatories — female (Students),"175 girls (50/50 of 350 planned capacity, DRAFT split)",5 (DRAFT),1:35 → 5,6,✓,
+Lavatories (Students),classroom-attached single restrooms (either sex),—,,2,✓,unisex — available to either sex
+Drinking fountains / bottle fillers (Students),350 students (campus),3 (DRAFT),1:150 → 3,7,✓,combination fountain + bottle-filler units
+Water closets — male (Staff),"13 staff (2 per classroom × 13, 50/50)",1 (DRAFT),1:25 → 1,3,✓,unisex single-user pool (serves both sexes)
+Water closets — female (Staff),"13 staff (2 per classroom × 13, 50/50)",1 (DRAFT),1:20 → 1,3,✓,unisex single-user pool (serves both sexes)
+Lavatories — male (Staff),"13 staff (2 per classroom × 13, 50/50)",1 (DRAFT),1:40 → 1,3,✓,unisex single-user pool (serves both sexes)
+Lavatories — female (Staff),"13 staff (2 per classroom × 13, 50/50)",1 (DRAFT),1:40 → 1,3,✓,unisex single-user pool (serves both sexes)
+
+BUILDING — Building A — Classrooms
+Fixture class,Occupancy basis,Required,Ratio,Provided,Status,Notes
+Water closets — male (Students),"175 boys (50/50 of 350 planned capacity, DRAFT split)",campus basis,,4,✓,
+Water closets — female (Students),"175 girls (50/50 of 350 planned capacity, DRAFT split)",campus basis,,6,✓,
+Water closets (Students),classroom-attached single restrooms (either sex),campus basis,,2,✓,unisex — available to either sex
+Urinals — male (Students),"175 boys (50/50 of 350 planned capacity, DRAFT split)",campus basis,,4,✓,
+Lavatories — male (Students),"175 boys (50/50 of 350 planned capacity, DRAFT split)",campus basis,,4,✓,
+Lavatories — female (Students),"175 girls (50/50 of 350 planned capacity, DRAFT split)",campus basis,,4,✓,
+Lavatories (Students),classroom-attached single restrooms (either sex),campus basis,,2,✓,unisex — available to either sex
+Drinking fountains / bottle fillers (Students),350 students (campus),campus basis,,2,✓,combination fountain + bottle-filler units
+Water closets — male (Staff),"13 staff (2 per classroom × 13, 50/50)",campus basis,,2,✓,unisex single-user pool (serves both sexes)
+Water closets — female (Staff),"13 staff (2 per classroom × 13, 50/50)",campus basis,,2,✓,unisex single-user pool (serves both sexes)
+Lavatories — male (Staff),"13 staff (2 per classroom × 13, 50/50)",campus basis,,2,✓,unisex single-user pool (serves both sexes)
+Lavatories — female (Staff),"13 staff (2 per classroom × 13, 50/50)",campus basis,,2,✓,unisex single-user pool (serves both sexes)
+
+BUILDING — Building B — Admin / Multipurpose
+Fixture class,Occupancy basis,Required,Ratio,Provided,Status,Notes
+Water closets — male (Students),"175 boys (50/50 of 350 planned capacity, DRAFT split)",campus basis,,2,✓,
+Water closets — female (Students),"175 girls (50/50 of 350 planned capacity, DRAFT split)",campus basis,,3,✓,
+Urinals — male (Students),"175 boys (50/50 of 350 planned capacity, DRAFT split)",campus basis,,2,✓,
+Lavatories — male (Students),"175 boys (50/50 of 350 planned capacity, DRAFT split)",campus basis,,2,✓,
+Lavatories — female (Students),"175 girls (50/50 of 350 planned capacity, DRAFT split)",campus basis,,2,✓,
+Drinking fountains / bottle fillers (Students),350 students (campus),campus basis,,3,✓,combination fountain + bottle-filler units
+Water closets — male (Staff),"13 staff (2 per classroom × 13, 50/50)",campus basis,,1,✓,unisex single-user pool (serves both sexes)
+Water closets — female (Staff),"13 staff (2 per classroom × 13, 50/50)",campus basis,,1,✓,unisex single-user pool (serves both sexes)
+Lavatories — male (Staff),"13 staff (2 per classroom × 13, 50/50)",campus basis,,1,✓,unisex single-user pool (serves both sexes)
+Lavatories — female (Staff),"13 staff (2 per classroom × 13, 50/50)",campus basis,,1,✓,unisex single-user pool (serves both sexes)
+
+BUILDING — Site Structures
+Fixture class,Occupancy basis,Required,Ratio,Provided,Status,Notes
+Water closets — male (Students),"175 boys (50/50 of 350 planned capacity, DRAFT split)",campus basis,,0,✓,
+Water closets — female (Students),"175 girls (50/50 of 350 planned capacity, DRAFT split)",campus basis,,0,✓,
+Urinals — male (Students),"175 boys (50/50 of 350 planned capacity, DRAFT split)",campus basis,,0,✓,
+Lavatories — male (Students),"175 boys (50/50 of 350 planned capacity, DRAFT split)",campus basis,,0,✓,
+Lavatories — female (Students),"175 girls (50/50 of 350 planned capacity, DRAFT split)",campus basis,,0,✓,
+Drinking fountains / bottle fillers (Students),350 students (campus),campus basis,,2,✓,combination fountain + bottle-filler units
+Water closets — male (Staff),"13 staff (2 per classroom × 13, 50/50)",campus basis,,0,✓,unisex single-user pool (serves both sexes)
+Water closets — female (Staff),"13 staff (2 per classroom × 13, 50/50)",campus basis,,0,✓,unisex single-user pool (serves both sexes)
+Lavatories — male (Staff),"13 staff (2 per classroom × 13, 50/50)",campus basis,,0,✓,unisex single-user pool (serves both sexes)
+Lavatories — female (Staff),"13 staff (2 per classroom × 13, 50/50)",campus basis,,0,✓,unisex single-user pool (serves both sexes)
+
+Required minimums are computed at campus level (planned capacity is campus-wide); per-building distribution basis is an open question (OQ-3).

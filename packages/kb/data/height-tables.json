@@ -1,0 +1,27 @@
+{
+  "id": "heights.22_1000_2.46",
+  "kind": "height_table",
+  "units": "inches AFF",
+  "standard": {
+    "water_closet_seat": { "secondary_adult": "15–17", "elementary": "15", "preK_K": "11–12" },
+    "lavatory_rim": { "secondary_adult": "32", "elementary": "30", "preK_K": "25" },
+    "urinal_lip": { "secondary_adult": "24", "elementary": "18" }
+  },
+  "accessible": {
+    "water_closet_seat": { "secondary_adult": "17–19" },
+    "lavatory_rim": { "secondary_adult": "34 max", "elementary": "30 max", "preK_K": "24 max" },
+    "urinal_lip": { "secondary_adult": "16", "elementary": "15", "preK_K": "13" },
+    "df_bubbler": { "secondary_adult": "36 max", "elementary": "30 max", "preK_K": "30 max" }
+  },
+  "notes": "Two mounting-height tables (standard + accessible) by fixture class and age band, distilled from 22 1000 2.46. Gaps (standard drinking-fountain bubbler heights; accessible WC seat heights for elementary/preK; standard urinal lip at preK) are not in the planning extracts — see OQ-14.",
+  "citations": [
+    {
+      "doc": "22 1000",
+      "section": "2.46 (mounting heights, standard + accessible × 3 age bands)",
+      "doc_version": "250908",
+      "note": "e.g. toilet seat 15–17/15/11–12; lav top 32/30/25 std, 34/30/24 max ADA; urinal lip 24/18 std, 16/15/13 ADA; DF bubbler 36/30/30 max ADA."
+    }
+  ],
+  "verification_status": "verified",
+  "todo": "OQ-14: fill the height-table gaps (standard DF bubbler; accessible WC seat at elementary/preK; confirm no standard preK urinal row)."
+}

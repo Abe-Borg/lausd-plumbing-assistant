@@ -1,0 +1,41 @@
+WATER TEMPERATURE SERVICE MATRIX (SDG 3.4-D)
+
+Room,Name,Type,Service,Driving citation,Note
+A107,FLEXIBLE CLASSROOM,Flexible classroom,Hot + cold,contracts/room-type-taxonomy.md classroom_flexible,
+A112,STAFF RR,Staff/faculty/adult restroom,Hot + cold,SDG 3.4-A.2/3 (faculty restroom kit) & 3.4-D; contracts/room-type-taxonomy.md restroom_staff,
+A113,CUSTODIAL,Custodial closet,Hot + cold,contracts/room-type-taxonomy.md custodial_closet; SDG 3.4-D,
+A212,STAFF RR,Staff/faculty/adult restroom,Hot + cold,SDG 3.4-A.2/3 (faculty restroom kit) & 3.4-D; contracts/room-type-taxonomy.md restroom_staff,
+A213,CUSTODIAL,Custodial closet,Hot + cold,contracts/room-type-taxonomy.md custodial_closet; SDG 3.4-D,
+B102,NURSE / HEALTH OFFICE,Nurse office / first aid,Hot + cold,SDG 3.4-D; contracts/room-type-taxonomy.md nurse_office,
+B103,STAFF LOUNGE,Faculty lounge,Hot + cold,contracts/room-type-taxonomy.md teachers_lounge,
+B104,PARENT CENTER,Parent center,Hot + cold,contracts/room-type-taxonomy.md parent_center,
+B106,LIBRARY WORKROOM,Library workroom,Hot + cold,contracts/room-type-taxonomy.md library_workroom,
+B108,SERVING KITCHEN,Serving/warming kitchen (no cooking),Hot + cold,contracts/room-type-taxonomy.md kitchen_serving; SDG 3.4-B.5 (grease/FOG),
+B111,RR (SINGLE ACC.),Single-user restroom,Hot + cold,contracts/room-type-taxonomy.md restroom_single_user,
+B112,CUSTODIAL,Custodial closet,Hot + cold,contracts/room-type-taxonomy.md custodial_closet; SDG 3.4-D,
+B113,RECEIVING / CUSTODIAL SUPPLIES STORAGE,Central custodial receiving/storage,Hot + cold,SDG 3.4-E.6 & 3.4-D; contracts/room-type-taxonomy.md custodial_receiving_storage,
+B115,STEAM ROOM,Makerspace,Hot + cold,contracts/room-type-taxonomy.md makerspace,
+A105A,KINDER RR,Student restroom,Tempered,SDG 3.4-A.2/3 (student restroom kit) & 3.4-D; contracts/room-type-taxonomy.md restroom_student,Tempered water regulating valve (TMV) near the outlets served; locate in the custodial room or similar — not inside the restroom.
+A106A,KINDER RR,Student restroom,Tempered,SDG 3.4-A.2/3 (student restroom kit) & 3.4-D; contracts/room-type-taxonomy.md restroom_student,Tempered water regulating valve (TMV) near the outlets served; locate in the custodial room or similar — not inside the restroom.
+A110,BOYS RR,Student restroom,Tempered,SDG 3.4-A.2/3 (student restroom kit) & 3.4-D; contracts/room-type-taxonomy.md restroom_student,Tempered water regulating valve (TMV) near the outlets served; locate in the custodial room or similar — not inside the restroom.
+A111,GIRLS RR,Student restroom,Tempered,SDG 3.4-A.2/3 (student restroom kit) & 3.4-D; contracts/room-type-taxonomy.md restroom_student,Tempered water regulating valve (TMV) near the outlets served; locate in the custodial room or similar — not inside the restroom.
+A210,BOYS RR,Student restroom,Tempered,SDG 3.4-A.2/3 (student restroom kit) & 3.4-D; contracts/room-type-taxonomy.md restroom_student,Tempered water regulating valve (TMV) near the outlets served; locate in the custodial room or similar — not inside the restroom.
+A211,GIRLS RR,Student restroom,Tempered,SDG 3.4-A.2/3 (student restroom kit) & 3.4-D; contracts/room-type-taxonomy.md restroom_student,Tempered water regulating valve (TMV) near the outlets served; locate in the custodial room or similar — not inside the restroom.
+B109,BOYS RR,Student restroom,Tempered,SDG 3.4-A.2/3 (student restroom kit) & 3.4-D; contracts/room-type-taxonomy.md restroom_student,Tempered water regulating valve (TMV) near the outlets served; locate in the custodial room or similar — not inside the restroom.
+B110,GIRLS RR,Student restroom,Tempered,SDG 3.4-A.2/3 (student restroom kit) & 3.4-D; contracts/room-type-taxonomy.md restroom_student,Tempered water regulating valve (TMV) near the outlets served; locate in the custodial room or similar — not inside the restroom.
+B113,RECEIVING / CUSTODIAL SUPPLIES STORAGE,Central custodial receiving/storage,Tepid (emergency),SDG 3.4-E.6; Title 8 CCR / ANSI Z358.1 5162,"Emergency shower/eyewash — tepid 60–100°F, potable connection."
+A101,CLASSROOM,General classroom,Cold only,SDG 3.4-D (water temperature); contracts/room-type-taxonomy.md classroom_general,
+A102,CLASSROOM,General classroom,Cold only,SDG 3.4-D (water temperature); contracts/room-type-taxonomy.md classroom_general,
+A103,CLASSROOM,General classroom,Cold only,SDG 3.4-D (water temperature); contracts/room-type-taxonomy.md classroom_general,
+A104,CLASSROOM,General classroom,Cold only,SDG 3.4-D (water temperature); contracts/room-type-taxonomy.md classroom_general,
+A105,KINDERGARTEN,Kindergarten classroom,Cold only,SDG 3.4-D (water temperature); contracts/room-type-taxonomy.md classroom_kindergarten,
+A106,KINDERGARTEN,Kindergarten classroom,Cold only,SDG 3.4-D (water temperature); contracts/room-type-taxonomy.md classroom_kindergarten,
+A201,CLASSROOM,General classroom,Cold only,SDG 3.4-D (water temperature); contracts/room-type-taxonomy.md classroom_general,
+A202,CLASSROOM,General classroom,Cold only,SDG 3.4-D (water temperature); contracts/room-type-taxonomy.md classroom_general,
+A203,CLASSROOM,General classroom,Cold only,SDG 3.4-D (water temperature); contracts/room-type-taxonomy.md classroom_general,
+A204,CLASSROOM,General classroom,Cold only,SDG 3.4-D (water temperature); contracts/room-type-taxonomy.md classroom_general,
+A205,CLASSROOM,General classroom,Cold only,SDG 3.4-D (water temperature); contracts/room-type-taxonomy.md classroom_general,
+A206,CLASSROOM,General classroom,Cold only,SDG 3.4-D (water temperature); contracts/room-type-taxonomy.md classroom_general,
+
+Setpoints:,Hot water 120°F at the heater / 115°F at the furthest outlet; tempered water 95–100°F; tepid water 60–100°F.
+TMV placement:,Tempered water regulating valve (TMV) near the outlets served; locate in the custodial room or similar — not inside the restroom.

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rule.prv",
+    "kind": "project_rule",
+    "rule": "prv_over_80",
+    "title": "Pressure regulating (PRV) station",
+    "requirement_text": "Street pressure exceeds 80 psi — provide a PRV station: dual pilot-actuated regulating valves in parallel (consider a third small regulator for low-flow), with strainers.",
+    "resolution": "auto",
+    "threshold_psi": 80,
+    "citations": [
+      {
+        "doc": "SDG",
+        "section": "3.4-E.2",
+        "doc_version": "02/26/2025",
+        "note": "PRV when street pressure > 80 psi (dual pilot-actuated regulators, possibly a third small one); ≥25 psi required at the farthest/highest fixture."
+      }
+    ],
+    "verification_status": "verified"
+  },
+  {
+    "id": "rule.ladwp_16d",
+    "kind": "project_rule",
+    "rule": "ladwp_16d",
+    "title": "LADWP Rule 16-D backflow compliance",
+    "requirement_text": "Water purveyor is LADWP — backflow prevention at the service must comply with LADWP Rule 16-D (meter protection: RP assemblies; dual parallel branches for uninterrupted domestic service).",
+    "resolution": "acknowledge",
+    "citations": [
+      {
+        "doc": "SDG",
+        "section": "3.4-E.1.b / 3.4-E.3 (backflow)",
+        "doc_version": "02/26/2025",
+        "note": "LADWP Rule 16-D; meter protection RP assemblies, dual parallel branches for domestic."
+      }
+    ],
+    "verification_status": "verified",
+    "notes": "Subsection 3.4-E.1.b carried from plan §4.1 — spot-verify granularity (OQ-19)."
+  },
+  {
+    "id": "rule.all_electric",
+    "kind": "project_rule",
+    "rule": "all_electric",
+    "title": "All-electric water heating",
+    "requirement_text": "Campus has no natural gas service — electric water heaters only (no gas, no heat-pump type): storage/tankless/instantaneous electric, ≤100 gal, high-recovery, in series with manifold; no multi-flue, no booster type. Gas subsystem rules are suppressed.",
+    "resolution": "acknowledge",
+    "citations": [
+      {
+        "doc": "SDG",
+        "section": "3.4-A.1.e",
+        "doc_version": "02/26/2025",
+        "note": "All-electric water heating."
+      },
+      {
+        "doc": "22 1000",
+        "section": "Part 2 — WH schedule / prohibitions",
+        "doc_version": "250908",
+        "note": "Electric water heaters only (no gas, no heat pump); ≤100 gal, high-recovery, in series w/ manifold; no multi-flue; no booster type."
+      }
+    ],
+    "verification_status": "verified",
+    "notes": "Subsection 3.4-A.1.e carried from plan §4.1/§1 — spot-verify granularity (OQ-19)."
+  }
+]
