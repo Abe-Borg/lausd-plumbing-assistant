@@ -1544,8 +1544,8 @@
       "resolution": {
         "kind": "quantities",
         "counts": {
-          "standard": 1,
-          "accessible": 0
+          "standard": 0,
+          "accessible": 1
         }
       }
     },
@@ -1590,8 +1590,8 @@
       "resolution": {
         "kind": "quantities",
         "counts": {
-          "standard": 1,
-          "accessible": 0
+          "standard": 0,
+          "accessible": 1
         }
       }
     },
@@ -3196,8 +3196,8 @@
       "resolution": {
         "kind": "quantities",
         "counts": {
-          "standard": 1,
-          "accessible": 0
+          "standard": 0,
+          "accessible": 1
         }
       }
     },
@@ -3235,8 +3235,8 @@
       "resolution": {
         "kind": "quantities",
         "counts": {
-          "standard": 1,
-          "accessible": 0
+          "standard": 0,
+          "accessible": 1
         }
       }
     },
@@ -3410,13 +3410,13 @@
       "scope": "room",
       "subject": "Emergency shower/eyewash — RECEIVING / CUSTODIAL SUPPLIES STORAGE (B113)",
       "status": "auto_resolved",
-      "rationale": "Emergency shower/eyewash at central custodial supplies storage; wording distinguishes school levels — encoded conservatively (required) for elementary receiving.",
+      "rationale": "Emergency shower/eyewash at central custodial supplies storage, on tepid water (60–100°F, potable connection); wording distinguishes school levels — encoded conservatively (required) for elementary receiving.",
       "citations": [
         {
           "doc": "SDG",
           "section": "3.4-E.6",
           "doc_version": "02/26/2025",
-          "note": "Emergency shower/eyewash at central custodial supplies storage; wording distinguishes school levels — encoded conservatively (required) for elementary receiving."
+          "note": "Emergency shower/eyewash at central custodial supplies storage, on tepid water (60–100°F, potable connection); wording distinguishes school levels — encoded conservatively (required) for elementary receiving."
         },
         {
           "doc": "Title 8 CCR / ANSI Z358.1",

@@ -469,7 +469,7 @@
         "selector": { "kind": "fixed", "assembly": "EEW-1" },
         "quantity": { "rule": "fixed", "n": 1, "basis": "rule" },
         "citations": [
-          { "doc": "SDG", "section": "3.4-E.6", "doc_version": "02/26/2025", "note": "Emergency shower/eyewash at central custodial supplies storage; wording distinguishes school levels — encoded conservatively (required) for elementary receiving." },
+          { "doc": "SDG", "section": "3.4-E.6", "doc_version": "02/26/2025", "note": "Emergency shower/eyewash at central custodial supplies storage, on tepid water (60–100°F, potable connection); wording distinguishes school levels — encoded conservatively (required) for elementary receiving." },
           { "doc": "Title 8 CCR / ANSI Z358.1", "section": "5162", "doc_version": "unversioned" }
         ],
         "verification_status": "draft",

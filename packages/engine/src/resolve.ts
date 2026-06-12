@@ -420,11 +420,22 @@ function fireProfiles(ctx: Ctx): void {
         // No stored human answer — resolve per the quantity rule.
         const q = req.quantity;
         if (q.rule === 'fixed') {
+          // ADA-designated rooms take the accessible variant explicitly, so the
+          // stored resolution reads true on its own (golden-review finding 1).
+          const hasAccessibleVariant =
+            (req.selector.kind === 'fixed' && req.selector.accessible !== undefined) ||
+            (req.selector.kind === 'by_age_band' && req.selector.accessible !== undefined);
+          const toAccessible = effective.ada_designated && hasAccessibleVariant;
           built = {
             ...built,
             status: 'auto_resolved',
             resolved_by: 'engine',
-            resolution: { kind: 'quantities', counts: { standard: q.n, accessible: 0 } },
+            resolution: {
+              kind: 'quantities',
+              counts: toAccessible
+                ? { standard: 0, accessible: q.n }
+                : { standard: q.n, accessible: 0 },
+            },
             rationale:
               q.basis === 'rule'
                 ? built.rationale

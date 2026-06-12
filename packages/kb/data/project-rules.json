@@ -32,7 +32,8 @@
         "note": "LADWP Rule 16-D; meter protection RP assemblies, dual parallel branches for domestic."
       }
     ],
-    "verification_status": "verified"
+    "verification_status": "verified",
+    "notes": "Subsection 3.4-E.1.b carried from plan §4.1 — spot-verify granularity (OQ-19)."
   },
   {
     "id": "rule.all_electric",
@@ -55,6 +56,7 @@
         "note": "Electric water heaters only (no gas, no heat pump); ≤100 gal, high-recovery, in series w/ manifold; no multi-flue; no booster type."
       }
     ],
-    "verification_status": "verified"
+    "verification_status": "verified",
+    "notes": "Subsection 3.4-A.1.e carried from plan §4.1/§1 — spot-verify granularity (OQ-19)."
   }
 ]

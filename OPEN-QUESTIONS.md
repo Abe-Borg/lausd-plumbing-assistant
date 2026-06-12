@@ -28,6 +28,7 @@ Every `draft` KB record must trace to exactly one OQ id (the record's `todo` cit
 | OQ-16 | OPEN | **"No Kohler U-1" at kindergarten.** The taxonomy carries this prohibition on the kindergarten row; clarify which product U-1 refers to (seat?). | WC-5 notes |
 | OQ-17 | OPEN | **`served_sex` field for the dossier contract (v0.2 proposal).** Urinal rules and per-sex count allocation need the restroom's served sex; the MVP derives it from `name_as_drawn` (BOYS/GIRLS) and queues a card otherwise. Propose adding an explicit optional field to `contracts/dossier-contract.md` with the dossier program's owner. | Engine normalize stage; quantity suggestions |
 | OQ-18 | NOTE | **Plan §2 Act-4 narration says "41 rooms untouched"; the synthetic data yields 42** (43 v1 rooms − 1 changed = 42 untouched, 1 added). The diff screen reports the computed truth (42). "2 items re-queued" holds: A107's stale sink decision + B117's new sink card. Flagging per the no-silent-deviation rule; no action needed unless the plan intended different data. | Delta diff summary (Act 4) |
+| OQ-19 | OPEN | **Spot-verify two SDG subsection numbers carried from the implementation plan.** `SDG 3.4-A.1.e` (all-electric water heating) and `SDG 3.4-E.1.b` (LADWP Rule 16-D) are cited per plan §4.1/§1; NOTES.md attributes the underlying facts to 22 1000 prohibitions / SDG 3.4-E.3 without those exact subsections. The facts themselves are verified; confirm the subsection granularity against the SDG PDF (golden-review findings 2–3). | project-rules.json citations |
 
 ## How to resolve one
 
