@@ -22,7 +22,7 @@ import {
   type ResolveResult,
   type RoomProgram,
 } from '@lausd-pa/engine';
-import { kb } from './data.ts';
+import { kb, sample } from './data.ts';
 
 export type View = 'dashboard' | 'queue' | 'artifacts';
 
@@ -95,6 +95,49 @@ function readPersistedProject(projectId: string): PersistedProject | null {
   }
 }
 
+// Pre-runtime-loading builds persisted under `lausd-pa:<project_id>` without a
+// dossier (it was baked into the bundle). The only such build shipped the sample
+// project, whose dossier still ships in the bundle — migrate that entry once so
+// decisions saved in the old build survive the upgrade.
+interface PersistedStateV1 {
+  schema_version: 1;
+  store: DecisionStore;
+  programLabel: string;
+  roomProgram: unknown;
+}
+
+function migrateV1SampleEntry(): void {
+  try {
+    const oldKey = `lausd-pa:${sample.projectId}`;
+    const raw = localStorage.getItem(oldKey);
+    if (!raw) return;
+    localStorage.removeItem(oldKey); // one-shot: migrated or discarded
+    const newKey = PROJECT_KEY_PREFIX + sample.projectId;
+    if (localStorage.getItem(newKey)) return; // v2 data exists — don't clobber it
+    const parsed = JSON.parse(raw) as PersistedStateV1;
+    if (
+      parsed.schema_version !== 1 ||
+      !parsed.store ||
+      parsed.store.project_id !== sample.projectId
+    ) {
+      return;
+    }
+    const payload: PersistedProject = {
+      schema_version: 2,
+      dossier: sample.dossier,
+      roomProgram: parsed.roomProgram ?? sample.roomProgramV1,
+      programLabel: parsed.programLabel || 'room_program.json (v1)',
+      store: parsed.store,
+    };
+    localStorage.setItem(newKey, JSON.stringify(payload));
+    if (!localStorage.getItem(LAST_PROJECT_KEY)) {
+      localStorage.setItem(LAST_PROJECT_KEY, sample.projectId);
+    }
+  } catch {
+    // Storage unavailable or a corrupt old entry — start fresh, as before.
+  }
+}
+
 /** The last project worked on, if its persisted copy still validates. */
 function loadLastProject(): { project: ActiveProject; store: DecisionStore } | null {
   try {
@@ -147,6 +190,7 @@ export function clearPersisted(projectId: string): void {
 }
 
 export function initialState(): AppState {
+  migrateV1SampleEntry();
   const resumed = loadLastProject();
   return {
     phase: 'load',
