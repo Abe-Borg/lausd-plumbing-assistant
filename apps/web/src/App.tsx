@@ -87,7 +87,15 @@ export function App() {
         </nav>
         <div className="topbar-right">
           <Meter resolved={result.completeness.resolved} total={result.completeness.total} />
-          <details className="menu">
+          <details
+            className="menu"
+            onClick={(e) => {
+              // Close the menu once an item inside it is chosen.
+              if ((e.target as HTMLElement).tagName === 'BUTTON') {
+                e.currentTarget.removeAttribute('open');
+              }
+            }}
+          >
             <summary>⋯</summary>
             <div className="menu-pop">
               <button

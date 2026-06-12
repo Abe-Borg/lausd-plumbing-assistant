@@ -61,6 +61,13 @@ export function RoomDetail({
   const room = result.rooms.find((r) => r.room_id === roomId);
   if (!room) return null;
   const dps = result.decision_points.filter((d) => d.room_id === roomId);
+  // Building/site-level requirements this room generates (fountain rule):
+  const generated = result.decision_points.filter(
+    (d) =>
+      d.requirement?.key === 'fountain' &&
+      Array.isArray(d.inputs_snapshot.members) &&
+      (d.inputs_snapshot.members as string[]).includes(roomId),
+  );
   const e = room.effective;
   const waterLabel =
     room.water_class === 'HC'
@@ -167,6 +174,26 @@ export function RoomDetail({
               </li>
             ))}
           </ul>
+        )}
+
+        {generated.length > 0 && (
+          <section className="room-generated">
+            <h4>Building/site requirements this room generates</h4>
+            <ul className="room-decisions">
+              {generated.map((dp) => (
+                <li key={dp.id} className={`room-decision rd-${dp.status}`}>
+                  <div className="rd-head">
+                    <strong>{dp.subject}</strong>
+                    <span className={`rd-status rd-status-${dp.status}`}>{statusLabel(dp)}</span>
+                    {dp.verification_status === 'draft' && <DraftBadge />}
+                  </div>
+                  <FixtureLinesText result={result} dp={dp} />
+                  <p className="rd-rationale">{dp.rationale}</p>
+                  <CitationChips citations={dp.citations} />
+                </li>
+              ))}
+            </ul>
+          </section>
         )}
 
         {room.not_applicable_rules.length > 0 && (
