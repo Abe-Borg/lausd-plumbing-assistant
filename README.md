@@ -29,6 +29,10 @@ npm test           # vitest, includes determinism golden tests
 npm run typecheck  # strict tsc across workspaces
 npm run lint       # eslint
 npm run dev        # the web app (Vista del Sol preloaded)
+npm run build      # portable build: ONE self-contained HTML file at
+                   # apps/web/dist/index.html — copy it anywhere (shared
+                   # drive), rename as you like, double-click to run.
+                   # No server, no installs, no network.
 ```
 
 Hard rules for contributors (plan §0): deterministic core, no invented LAUSD facts
