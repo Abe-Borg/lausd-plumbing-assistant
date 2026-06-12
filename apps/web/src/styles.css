@@ -95,6 +95,32 @@ code { background: var(--accent-soft); padding: 0 4px; border-radius: 4px; }
 .import-progress .pending { color: var(--ink-soft); }
 .load-foot { color: var(--ink-soft); font-size: 0.85rem; text-align: center; max-width: 560px; }
 
+/* runtime project loading (file pickers + validation report) */
+.file-row { display: flex; align-items: center; gap: 12px; padding: 9px 0; }
+.file-row + .file-row { border-top: 1px solid var(--line); }
+.file-row code { flex: 0 0 auto; }
+.file-name { flex: 1; color: var(--ink-soft); overflow-wrap: anywhere; }
+.file-name.staged { color: var(--ok); font-weight: 600; }
+.file-row .btn { flex: 0 0 auto; }
+.import-issues {
+  background: var(--stale-soft);
+  border: 1px solid var(--stale);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 14px 0;
+}
+.import-issues ul { margin: 6px 0 0; padding-left: 18px; }
+.import-warnings {
+  background: var(--warn-soft);
+  border: 1px solid var(--warn);
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin: 14px 0;
+}
+.import-warnings summary { color: var(--warn); cursor: pointer; }
+.import-warnings ul { margin: 6px 0 0; padding-left: 18px; }
+.load-sample { text-align: center; color: var(--ink-soft); margin-top: 14px; }
+
 /* ---- topbar ---- */
 .topbar {
   display: flex;

@@ -1,11 +1,12 @@
 // App shell: load screen → workspace (dashboard / queue / artifacts) with the
-// room-detail drawer. State persists to localStorage; decisions can be
-// downloaded/loaded as JSON (plan §3).
+// room-detail drawer. The project loads at runtime from dossier.json +
+// room_program.json picks; state persists to localStorage per project_id;
+// decisions can be downloaded/loaded as JSON (plan §3).
 
 import { useRef } from 'react';
 import type { DecisionStore } from '@lausd-pa/engine';
-import { PROJECT_ID, roomProgramV2 } from './data.ts';
-import { downloadJson, useAppState, useEngine, type View } from './state.ts';
+import { sample } from './data.ts';
+import { downloadJson, projectIdOf, useAppState, useEngine, type View } from './state.ts';
 import { ArtifactsView } from './components/ArtifactsView.tsx';
 import { Dashboard } from './components/Dashboard.tsx';
 import { DeltaScreen } from './components/DeltaScreen.tsx';
@@ -31,19 +32,22 @@ export function App() {
     });
   };
 
-  if (state.phase !== 'workspace') {
-    const resuming = Object.keys(state.store.decisions).length > 0;
+  const project = state.project;
+  if (state.phase !== 'workspace' || project === null || engine === null) {
     return (
       <LoadScreen
         importing={state.phase === 'importing'}
-        roomCount={engine.result.rooms.length}
-        resuming={resuming}
-        onOpen={() => dispatch({ type: 'open_project' })}
+        roomCount={engine?.result.rooms.length ?? 0}
+        project={project}
+        hasDecisions={Object.keys(state.store.decisions).length > 0}
+        onOpen={(p) => dispatch({ type: 'open_project', project: p })}
         onImported={() => dispatch({ type: 'import_finished' })}
       />
     );
   }
 
+  const projectId = projectIdOf(project);
+  const p = project.dossier.project;
   const { result, artifacts } = engine;
   const views: { id: View; label: string; badge?: number }[] = [
     { id: 'dashboard', label: 'Dashboard' },
@@ -55,8 +59,8 @@ export function App() {
     file.text().then((text) => {
       try {
         const parsed = JSON.parse(text) as DecisionStore;
-        if (parsed.project_id !== PROJECT_ID) {
-          alert(`Decisions file is for project "${parsed.project_id}", not "${PROJECT_ID}".`);
+        if (parsed.project_id !== projectId) {
+          alert(`Decisions file is for project "${parsed.project_id}", not "${projectId}".`);
           return;
         }
         dispatch({ type: 'load_store', store: parsed });
@@ -70,8 +74,8 @@ export function App() {
     <div className="app">
       <header className="topbar no-print">
         <div className="topbar-title">
-          <strong>Vista del Sol ES</strong>
-          <span className="topbar-program">{state.programLabel}</span>
+          <strong>{p.school_name ?? p.name ?? projectId}</strong>
+          <span className="topbar-program">{project.programLabel}</span>
         </div>
         <nav className="topbar-nav">
           {views.map((v) => (
@@ -98,35 +102,41 @@ export function App() {
           >
             <summary>⋯</summary>
             <div className="menu-pop">
-              <button
-                onClick={() =>
-                  dispatch({
-                    type: 'stage_import',
-                    pending: { label: 'room_program.v2.json (DD revision)', roomProgram: roomProgramV2 },
-                  })
-                }
-              >
-                Import DD revision (room_program.v2.json)
-              </button>
+              {projectId === sample.projectId && (
+                <button
+                  onClick={() =>
+                    dispatch({
+                      type: 'stage_import',
+                      pending: {
+                        label: 'room_program.v2.json (DD revision)',
+                        roomProgram: sample.roomProgramV2,
+                      },
+                    })
+                  }
+                >
+                  Import sample DD revision (room_program.v2.json)
+                </button>
+              )}
               <button onClick={() => programFileInput.current?.click()}>
                 Import room program from file…
               </button>
               <button
                 onClick={() =>
-                  downloadJson(`decisions-${PROJECT_ID}.json`, state.store)
+                  downloadJson(`decisions-${projectId}.json`, state.store)
                 }
               >
                 Download decisions JSON
               </button>
               <button onClick={() => storeFileInput.current?.click()}>Load decisions JSON…</button>
+              <button onClick={() => dispatch({ type: 'back_to_load' })}>Switch project…</button>
               <button
                 onClick={() => {
-                  if (confirm('Reset the demo? Clears all decisions and reloads v1.')) {
-                    dispatch({ type: 'reset_demo' });
+                  if (confirm('Clear all saved decisions for this project and close it?')) {
+                    dispatch({ type: 'reset_project' });
                   }
                 }}
               >
-                Reset demo (clear storage, reload v1)
+                Clear project data…
               </button>
             </div>
           </details>

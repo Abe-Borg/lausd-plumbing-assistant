@@ -24,12 +24,18 @@ The MVP is specified in [`plans/mvp-implementation-plan.md`](plans/mvp-implement
 ## Commands
 
 ```bash
-npm install        # once (Node 20.19+ or 22.12+, per Vite 7)
-npm test           # vitest, includes determinism golden tests
-npm run typecheck  # strict tsc across workspaces
-npm run lint       # eslint
-npm run dev        # the web app (Vista del Sol preloaded)
+npm install              # once (Node 20.19+ or 22.12+, per Vite 7)
+npm test                 # vitest, includes determinism golden tests
+npm run typecheck        # strict tsc across workspaces
+npm run lint             # eslint
+npm run dev              # the web app
+npm run build:singlefile # one self-contained dist/index.html — open by double-click, no server
 ```
+
+Projects load at runtime: the app opens to a load screen where the user picks a
+`dossier.json` + `room_program.json` pair (validated against `contracts/` on the spot).
+One built artifact serves every project; the Vista del Sol sample ships bundled and can
+be staged from the load screen. Decisions persist in localStorage per `project_id`.
 
 Hard rules for contributors (plan §0): deterministic core, no invented LAUSD facts
 (`draft` + open question instead), exception cards over guesses, stable IDs are sacred,
