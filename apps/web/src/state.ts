@@ -1,6 +1,8 @@
-// App state: a thin shell around the pure engine. The engine result is a memo
-// of (dossier, active room program, decision store); the store persists to
-// localStorage keyed by project_id and via download/load JSON (plan §3).
+// App state: a thin shell around the pure engine. The project (dossier + room
+// program) is loaded at runtime — staged from file picks on the load screen or
+// resumed from localStorage — so one built artifact serves every project.
+// Decision stores persist per project_id (plan §3); the last-opened project is
+// remembered so reopening the app offers a resume.
 
 import { useEffect, useMemo, useReducer } from 'react';
 import {
@@ -11,16 +13,30 @@ import {
   emptyStore,
   reopenDecision,
   resolve,
+  validateImport,
   type Artifacts,
   type CardAnswer,
   type DecisionStore,
   type DeltaSummary,
+  type Dossier,
   type ResolveResult,
   type RoomProgram,
 } from '@lausd-pa/engine';
-import { dossierJson, kb, PROJECT_ID, roomProgramV1 } from './data.ts';
+import { kb } from './data.ts';
 
 export type View = 'dashboard' | 'queue' | 'artifacts';
+
+/** A runtime-loaded project: validated dossier + the room program as loaded. */
+export interface ActiveProject {
+  dossier: Dossier;
+  /** Raw as loaded — resolve() re-validates, so refused rooms surface as cards. */
+  roomProgram: unknown;
+  programLabel: string;
+}
+
+export function projectIdOf(project: ActiveProject): string {
+  return project.dossier.project.project_id;
+}
 
 export interface PendingImport {
   label: string;
@@ -29,9 +45,8 @@ export interface PendingImport {
 
 export interface AppState {
   phase: 'load' | 'importing' | 'workspace';
-  /** The active room program (v1 bundled, or whatever was imported/applied). */
-  roomProgram: unknown;
-  programLabel: string;
+  /** Null until files are staged on the load screen (or a persisted project resumes). */
+  project: ActiveProject | null;
   store: DecisionStore;
   view: View;
   selectedRoomId: string | null;
@@ -41,8 +56,10 @@ export interface AppState {
 }
 
 export type Action =
-  | { type: 'open_project' }
+  | { type: 'open_project'; project: ActiveProject }
   | { type: 'import_finished' }
+  | { type: 'back_to_load' }
+  | { type: 'reset_project' }
   | { type: 'set_view'; view: View }
   | { type: 'select_room'; roomId: string | null }
   | { type: 'answer_card'; result: ResolveResult; cardId: string; answer: CardAnswer }
@@ -51,59 +68,90 @@ export type Action =
   | { type: 'load_store'; store: DecisionStore }
   | { type: 'stage_import'; pending: PendingImport }
   | { type: 'cancel_import' }
-  | { type: 'apply_import'; nextResolved: ResolveResult }
-  | { type: 'reset_demo' };
+  | { type: 'apply_import'; nextResolved: ResolveResult };
 
-const STORAGE_KEY = `lausd-pa:${PROJECT_ID}`;
+const PROJECT_KEY_PREFIX = 'lausd-pa:project:';
+const LAST_PROJECT_KEY = 'lausd-pa:last-project';
 
-interface PersistedState {
-  schema_version: 1;
-  store: DecisionStore;
-  programLabel: string;
+interface PersistedProject {
+  schema_version: 2;
+  dossier: unknown;
   roomProgram: unknown;
+  programLabel: string;
+  store: DecisionStore;
 }
 
-function loadPersisted(): PersistedState | null {
+function readPersistedProject(projectId: string): PersistedProject | null {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(PROJECT_KEY_PREFIX + projectId);
     if (!raw) return null;
-    const parsed = JSON.parse(raw) as PersistedState;
-    if (parsed.schema_version !== 1 || !parsed.store) return null;
+    const parsed = JSON.parse(raw) as PersistedProject;
+    if (parsed.schema_version !== 2 || !parsed.store || parsed.store.project_id !== projectId) {
+      return null;
+    }
     return parsed;
   } catch {
     return null;
   }
 }
 
-export function persist(state: AppState): void {
+/** The last project worked on, if its persisted copy still validates. */
+function loadLastProject(): { project: ActiveProject; store: DecisionStore } | null {
   try {
-    const payload: PersistedState = {
-      schema_version: 1,
-      store: state.store,
-      programLabel: state.programLabel,
-      roomProgram: state.roomProgram,
+    const projectId = localStorage.getItem(LAST_PROJECT_KEY);
+    if (!projectId) return null;
+    const persisted = readPersistedProject(projectId);
+    if (!persisted) return null;
+    const report = validateImport(persisted.dossier, persisted.roomProgram);
+    if (!report.ok || !report.dossier) return null;
+    return {
+      project: {
+        dossier: report.dossier,
+        roomProgram: persisted.roomProgram,
+        programLabel: persisted.programLabel,
+      },
+      store: persisted.store,
     };
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+  } catch {
+    return null;
+  }
+}
+
+export function persist(state: AppState): void {
+  if (!state.project) return;
+  try {
+    const projectId = projectIdOf(state.project);
+    const payload: PersistedProject = {
+      schema_version: 2,
+      dossier: state.project.dossier,
+      roomProgram: state.project.roomProgram,
+      programLabel: state.project.programLabel,
+      store: state.store,
+    };
+    localStorage.setItem(PROJECT_KEY_PREFIX + projectId, JSON.stringify(payload));
+    localStorage.setItem(LAST_PROJECT_KEY, projectId);
   } catch {
     // Storage unavailable (private mode etc.) — the session still works.
   }
 }
 
-export function clearPersisted(): void {
+export function clearPersisted(projectId: string): void {
   try {
-    localStorage.removeItem(STORAGE_KEY);
+    localStorage.removeItem(PROJECT_KEY_PREFIX + projectId);
+    if (localStorage.getItem(LAST_PROJECT_KEY) === projectId) {
+      localStorage.removeItem(LAST_PROJECT_KEY);
+    }
   } catch {
     /* ignore */
   }
 }
 
 export function initialState(): AppState {
-  const persisted = loadPersisted();
+  const resumed = loadLastProject();
   return {
     phase: 'load',
-    roomProgram: persisted?.roomProgram ?? roomProgramV1,
-    programLabel: persisted?.programLabel ?? 'room_program.json (v1)',
-    store: persisted?.store ?? emptyStore(PROJECT_ID),
+    project: resumed?.project ?? null,
+    store: resumed?.store ?? emptyStore(''),
     view: 'dashboard',
     selectedRoomId: null,
     pendingImport: null,
@@ -113,10 +161,41 @@ export function initialState(): AppState {
 
 export function reducer(state: AppState, action: Action): AppState {
   switch (action.type) {
-    case 'open_project':
-      return { ...state, phase: 'importing' };
+    case 'open_project': {
+      const projectId = projectIdOf(action.project);
+      // Decisions resume per project: the store already in state (resume path),
+      // else whatever this browser persisted for the project, else empty.
+      const store =
+        state.store.project_id === projectId
+          ? state.store
+          : (readPersistedProject(projectId)?.store ?? emptyStore(projectId));
+      return {
+        ...state,
+        phase: 'importing',
+        project: action.project,
+        store,
+        view: 'dashboard',
+        selectedRoomId: null,
+        pendingImport: null,
+        lastAnswered: null,
+      };
+    }
     case 'import_finished':
       return { ...state, phase: 'workspace' };
+    case 'back_to_load':
+      return { ...state, phase: 'load', pendingImport: null, selectedRoomId: null };
+    case 'reset_project': {
+      if (state.project) clearPersisted(projectIdOf(state.project));
+      return {
+        phase: 'load',
+        project: null,
+        store: emptyStore(''),
+        view: 'dashboard',
+        selectedRoomId: null,
+        pendingImport: null,
+        lastAnswered: null,
+      };
+    }
     case 'set_view':
       return { ...state, view: action.view, selectedRoomId: null };
     case 'select_room':
@@ -142,7 +221,7 @@ export function reducer(state: AppState, action: Action): AppState {
     case 'cancel_import':
       return { ...state, pendingImport: null };
     case 'apply_import': {
-      if (!state.pendingImport) return state;
+      if (!state.pendingImport || !state.project) return state;
       const livingIds = new Set(action.nextResolved.decision_points.map((d) => d.id));
       const store = archiveOrphans(
         state.store,
@@ -151,20 +230,14 @@ export function reducer(state: AppState, action: Action): AppState {
       );
       return {
         ...state,
-        roomProgram: state.pendingImport.roomProgram,
-        programLabel: state.pendingImport.label,
+        project: {
+          ...state.project,
+          roomProgram: state.pendingImport.roomProgram,
+          programLabel: state.pendingImport.label,
+        },
         store,
         pendingImport: null,
         view: 'queue',
-      };
-    }
-    case 'reset_demo': {
-      clearPersisted();
-      return {
-        ...initialState(),
-        roomProgram: roomProgramV1,
-        programLabel: 'room_program.json (v1)',
-        store: emptyStore(PROJECT_ID),
       };
     }
   }
@@ -177,23 +250,29 @@ export interface EngineView {
   pending: { result: ResolveResult; delta: DeltaSummary } | null;
 }
 
-export function useEngine(state: AppState): EngineView {
+/** Null until a project is loaded. */
+export function useEngine(state: AppState): EngineView | null {
+  const { project, store, pendingImport } = state;
   const result = useMemo(
-    () => resolve({ dossier: dossierJson, roomProgram: state.roomProgram, kb, store: state.store }),
-    [state.roomProgram, state.store],
+    () =>
+      project
+        ? resolve({ dossier: project.dossier, roomProgram: project.roomProgram, kb, store })
+        : null,
+    [project, store],
   );
-  const artifacts = useMemo(() => buildArtifacts(kb, result), [result]);
+  const artifacts = useMemo(() => (result ? buildArtifacts(kb, result) : null), [result]);
   const pending = useMemo(() => {
-    if (!state.pendingImport) return null;
+    if (!project || !pendingImport) return null;
     const nextResolved = resolve({
-      dossier: dossierJson,
-      roomProgram: state.pendingImport.roomProgram,
+      dossier: project.dossier,
+      roomProgram: pendingImport.roomProgram,
       kb,
-      store: state.store,
+      store,
     });
-    const delta = computeDelta(state.roomProgram as RoomProgram, nextResolved, state.store);
+    const delta = computeDelta(project.roomProgram as RoomProgram, nextResolved, store);
     return { result: nextResolved, delta };
-  }, [state.pendingImport, state.roomProgram, state.store]);
+  }, [project, pendingImport, store]);
+  if (!result || !artifacts) return null;
   return { result, artifacts, pending };
 }
 
